@@ -13,7 +13,7 @@ body {
   color: #fd6e0a;
 }
 
-.btn-primary {
+.btn-customized {
   height: 64px;
   border-radius: 5px;
   background: #fd6e0a;
@@ -22,10 +22,6 @@ body {
   font-weight: 700;
   color: #fff;
   padding: 18px 35px;
-}
-
-button:hover {
-  background-color: cornflowerblue;
 }
 
 .dark1 {
@@ -40,14 +36,14 @@ button:hover {
 
 /* nav bar */
 
-nav {
+/* nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 72.5%;
   max-width: 1160px;
   margin: 0 220px;
-}
+} */
 
 .nav-title {
   font-size: 45px;
@@ -73,20 +69,16 @@ nav a {
 
 #header {
   background: #fff8f3;
-  background-image: url(../images/header_bg.png), url(../images/developer.png);
+  background-image: url(../src/assets/images/header_bg.png), url(../src/assets/images/developer.png);
   background-repeat: no-repeat;
-  background-position: bottom right, top left;
+  background-position: bottom right, top 6rem left 1rem;
 }
 
 .banner {
-  display: flex;
-  padding: 60px 30px 0px 220px;
+  /* display: flex; */
+  /* padding: 60px 30px 0px 220px; */
   align-items: center;
   justify-content: space-between;
-}
-
-.banner .banner-content {
-  max-width: 500px;
 }
 
 .banner .banner-greeting {
@@ -96,18 +88,18 @@ nav a {
 }
 
 .banner .banner-title {
-  font-size: 85px;
+  /* font-size: 85px; */
   font-weight: 700px;
 }
 
-.banner .banner-content p {
+.banner p {
   font-size: 18px;
   font-weight: 400;
   line-height: 30px;
   margin: 20px 0 30px 0;
 }
 
-.banner .banner-content .btn {
+.banner .btn {
   background-color: white;
   color: #fd6e0a;
   border: #fd6e0a 1px solid;
@@ -117,7 +109,7 @@ nav a {
   font-weight: 700;
   padding: 18px 35px;
 }
-.banner .banner-content .btn:hover {
+.banner .btn:hover {
   background-color: cornflowerblue;
   border: cornflowerblue 1px solid;
   color: #fff;
