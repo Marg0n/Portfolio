@@ -1,6 +1,7 @@
 import { FaDownload, FaPhoneAlt } from "react-icons/fa";
 import '../App.css'
 import { PropTypes } from 'prop-types';
+import Pimg from "../assets/images/SMD.png";
 
 
 const Heading = ({downloadPdf}) => {
@@ -8,7 +9,7 @@ const Heading = ({downloadPdf}) => {
    
     return (
         <>
-            <header id="header"
+            <header
                 className="bg-no-repeat"
             // style={{ backgroundImage: `url(${'../src/assets/images/developer.png'})`, backgroundPosition: `left 1rem top 6rem` }}
             >
@@ -42,7 +43,7 @@ const Heading = ({downloadPdf}) => {
                     </div>
 
                     <div className="">
-                        <img id="profile-pic" src="/src/assets/images/SMD.png" alt="" />
+                        <img id="profile-pic" src={Pimg} alt="" />
                     </div>
                 </div>
             </header >

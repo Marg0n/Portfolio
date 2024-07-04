@@ -2,13 +2,13 @@
 
 const Skills = () => {
     return (
-        <div className="hero flex flex-col" id="skills">
-            <div className="hero-content text-text-center w-3/4 h-3/4 shadow-2xl bg-opacity-5 bg-orange-500 flex flex-col">
+        <div className="hero min-h-screen" id="skills">
+            <div className="hero-content text-text-center w-3/4 h-3/4 shadow-2xl bg-opacity-5 bg-orange-500 flex flex-col justify-between items-center">
 
-                <div>
+                <div className="max-w-xl ">
                     <h1 className="text-5xl font-bold text-center">Skills Set</h1>
-                    <p className="py-6">
-                        From my university tenure to recent years, I have gained knowledge about various languages. But now, I am more proficient on  <strong className="primary-color">MERN stack</strong> web development. I am currently working more with <i className="primary-color">HTML</i>,  <i className="primary-color">CSS</i>, <i className="primary-color">Tailwind</i>, <i className="primary-color">JavaScript</i>, <i className="primary-color">React</i>, <i className="primary-color">Firebase</i>, <i className="primary-color">Node JS</i>, <i className="primary-color">Express JS</i>, <i className="primary-color">MongoDB</i> and <i className="primary-color">MySQL</i>. I am also a team player and can work in group environment. 
+                    <p className="py-6 text-justify">
+                        From my university tenure to recent years, I have gained knowledge about various languages. But now, I am more proficient on  <strong className="primary-color">MERN stack</strong> web development. I am currently working more with <i className="primary-color">HTML</i>,  <i className="primary-color">CSS</i>, <i className="primary-color">Tailwind</i>, <i className="primary-color">JavaScript</i>, <i className="primary-color">React</i>, <i className="primary-color">Firebase</i>, <i className="primary-color">Node JS</i>, <i className="primary-color">Express JS</i>, <i className="primary-color">MongoDB</i> and <i className="primary-color">MySQL</i>. I am also a team player and can work in group environment.
                     </p>
                 </div>
 
