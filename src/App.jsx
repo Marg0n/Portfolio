@@ -2,6 +2,7 @@
 import About from './components/About'
 import Footer from './components/Footer'
 import Heading from './components/Heading'
+import Skills from './components/Skills'
 
 function App() {
 
@@ -11,6 +12,8 @@ function App() {
       <Heading/>
 
       <About/>
+
+      <Skills/>
 
       <Footer />
 
