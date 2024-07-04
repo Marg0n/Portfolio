@@ -25,7 +25,7 @@ const Card = ({name, descp, lang, link}) => {
                         alt="" />
                 </figure>
                 <div className="card-body mt-2">
-                    <h2 className="card-title hover:scale-105 primary-color"><a href={link}>{name}</a></h2>
+                    <h2 className="card-title hover:scale-105 primary-color">{name}</h2>
                     <p>{descp}</p>
                     <div className="card-actions justify-end">
                         Tech: {lang}

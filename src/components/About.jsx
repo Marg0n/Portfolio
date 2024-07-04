@@ -3,7 +3,7 @@
 const About = () => {
     return (
         <>
-            <div className="hero  min-h-screen">
+            <div className="hero  min-h-screen" id="about">
                 <div className="hero-content text-center w-3/4 h-3/4 shadow-2xl bg-opacity-5 bg-orange-500 flex flex-col">
                     <div className="max-w-md">
                         <h1 className="text-5xl font-bold">About Me</h1>
@@ -14,18 +14,23 @@ const About = () => {
                     >
                     <div className="w-full flex justify-center items-center">
                         <table className="w-full">
-                            <tr className="font-bold text-lg">
-                                <td>Name</td>
-                                <td>Education</td>
-                                <td>email</td>
-                                <td>Current Location</td>
-                            </tr>
-                            <tr>
-                                <td>Sokhorio Margon D&apos; Costa</td>
-                                <td>BSC in CSE, AIUB</td>
-                                <td>monondcosta@gmail.com</td>
-                                <td>Dhaka</td>
-                            </tr>
+                            <thead>
+                                <tr className="font-bold text-lg">
+                                    <td>Name</td>
+                                    <td>Education</td>
+                                    <td>email</td>
+                                    <td>Current Location</td>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>Sokhorio Margon D&apos; Costa</td>
+                                    <td>BSC in CSE, AIUB</td>
+                                    <td>monondcosta@gmail.com</td>
+                                    <td>Dhaka</td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
                 </div>

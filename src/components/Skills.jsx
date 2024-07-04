@@ -2,7 +2,7 @@
 
 const Skills = () => {
     return (
-        <div className="hero flex flex-col">
+        <div className="hero flex flex-col" id="skills">
             <div className="hero-content text-text-center w-3/4 h-3/4 shadow-2xl bg-opacity-5 bg-orange-500 flex flex-col">
 
                 <div>
