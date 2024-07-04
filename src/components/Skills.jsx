@@ -8,7 +8,7 @@ const Skills = () => {
                 <div>
                     <h1 className="text-5xl font-bold text-center">Skills Set</h1>
                     <p className="py-6">
-                        From my university tenure to recent years, I have gained knowledge about various languages. But now, I am more proficient on  <strong className="primary-color">MERN stack</strong> web development. I am currently working more with <i className="primary-color">HTML</i>,  <i className="primary-color">CSS</i>, <i className="primary-color">Tailwind</i>, <i className="primary-color">JavaScript</i>, <i className="primary-color">React</i>, <i className="primary-color">Firebase</i>, <i className="primary-color">Node JS</i>, <i className="primary-color">Express JS</i>, <i className="primary-color">MongoDB</i> and <i className="primary-color">MySQL</i>.
+                        From my university tenure to recent years, I have gained knowledge about various languages. But now, I am more proficient on  <strong className="primary-color">MERN stack</strong> web development. I am currently working more with <i className="primary-color">HTML</i>,  <i className="primary-color">CSS</i>, <i className="primary-color">Tailwind</i>, <i className="primary-color">JavaScript</i>, <i className="primary-color">React</i>, <i className="primary-color">Firebase</i>, <i className="primary-color">Node JS</i>, <i className="primary-color">Express JS</i>, <i className="primary-color">MongoDB</i> and <i className="primary-color">MySQL</i>. I am also a team player and can work in group environment. 
                     </p>
                 </div>
 
