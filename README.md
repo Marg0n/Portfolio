@@ -11,3 +11,5 @@ To have a better performance I have used the following:
 - [Daisy UI](https://daisyui.com/)
 - [TailwindCSS](https://tailwindcss.com/)
 - [React Router Dom](https://reactrouter.com/en/main)
+- [html2canvas](https://www.npmjs.com/package/html2canvas/v/1.4.1)
+- [jsPDF](https://www.npmjs.com/package/jspdf)
