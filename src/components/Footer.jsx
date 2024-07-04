@@ -1,4 +1,4 @@
-import { FaFacebookF, FaLinkedinIn } from "react-icons/fa6";
+import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { FcInvite, FcPhoneAndroid } from "react-icons/fc";
 
@@ -32,10 +32,13 @@ const Footer = () => {
                     <div className="grid grid-flow-col gap-4">
 
                         <Link to='https://linkedin.com/in/sokhorio-margon-d-costa-885823193' target="_blank" className="hover:scale-110">
-                            <FaLinkedinIn />
+                            <FaLinkedinIn size={25}/>
                         </Link>
                         <Link to='https://www.facebook.com/margon.dcosta/' target="_blank" className="hover:scale-110">
-                            <FaFacebookF />
+                            <FaFacebookF  size={25}/>
+                        </Link>
+                        <Link to='https://github.com/Marg0n' target="_blank" className="hover:scale-110">
+                        <FaGithub size={25}/>
                         </Link>
                     </div>
                 </nav>
