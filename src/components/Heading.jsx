@@ -1,4 +1,6 @@
 import { FaDownload, FaPhoneAlt } from "react-icons/fa";
+import '../App.css'
+import { HiMenuAlt1 } from "react-icons/hi";
 
 
 const Heading = () => {
@@ -6,7 +8,7 @@ const Heading = () => {
     const lists = <>
         <li><a className="dark2 hover:bg-orange-300" href="#header">Portfolio</a></li>
         <li><a className="dark2 hover:bg-orange-300" href="#about">About Me</a></li>
-        <li><a href="contact" className="lg:hidden  hover:bg-base-100">
+        <li><a href="#contact" className="lg:hidden  hover:bg-base-100">
             <button className="primary-color font-bold font-serif">Hire Me</button>
         </a></li>
     </>
@@ -19,22 +21,11 @@ const Heading = () => {
             >
 
 
-                <div className="relative navbar  justify-center">
+                <div className="navbar  justify-center sticky top-0  bg-opacity-5 bg-orange-500">
                     {/* hidden nav list for mobile */}
-                    <div className="dropdown absolute left-8 bg-red-600">
-                        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="h-5 w-5"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth="2"
-                                    d="M4 6h16M4 12h8m-8 6h16" />
-                            </svg>
+                    <div className="dropdown absolute left-8 ">
+                        <div tabIndex={0} role="button" className="btn btn-ghost btn-[primary-color] lg:hidden">                            
+                            <HiMenuAlt1 size={25} className="primary-color"/>
                         </div>
                         <ul
                             tabIndex={0}
@@ -51,7 +42,7 @@ const Heading = () => {
                         <div className="hidden lg:flex">
                             <ul className="menu menu-horizontal px-1 items-center">
                                 {lists}
-                                <li ><a href="contact">
+                                <li ><a href="#contact">
                                     <button className="btn-customized">Hire Me</button>
                                 </a></li>
                             </ul>
@@ -67,7 +58,7 @@ const Heading = () => {
                                 Sokhorio Margon D<span className="primary-color">&apos;</span> Costa
                             </h1>
                             <p className="dark3 text-wrap">
-                                I am a <strong className="primary-color">MERN stack</strong> web developer. I am knowledgeable with <i className="primary-color">HTML</i>,  <i className="primary-color">CSS</i>, <i className="primary-color">Tailwind</i>, <i className="primary-color">JavaScript</i>, <i className="primary-color">React</i>, <i className="primary-color">Firebase</i>, <i className="primary-color">Node JS</i>, <i className="primary-color">Express JS</i>, <i className="primary-color">MongoDB</i>. I love coding, as it gives me the feelings of fulfillment. In the future, I also love to learn, know and work more about these and the similar technologies.
+                                I am a <strong className="primary-color">MERN stack</strong> web developer. I am knowledgeable with <i className="primary-color">HTML</i>,  <i className="primary-color">CSS</i>, <i className="primary-color">Tailwind</i>, <i className="primary-color">JavaScript</i>, <i className="primary-color">React</i>, <i className="primary-color">Firebase</i>, <i className="primary-color">Node JS</i>, <i className="primary-color">Express JS</i>, <i className="primary-color">MongoDB</i> and <i className="primary-color">MySQL</i>. I love coding, as it gives me the feelings of fulfillment. In the future, I also love to learn, know and work more about these and the similar technologies.
                             </p>
                         </div>
 
