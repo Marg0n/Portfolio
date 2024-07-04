@@ -8,7 +8,13 @@ import Skills from './components/Skills'
 import './App.css'
 import { HiMenuAlt1 } from "react-icons/hi";
 
+import { jsPDF } from "jspdf";
+import html2canvas from "html2canvas";
+import { useRef } from 'react'
+
 function App() {
+
+  const pdfRef = useRef();
 
   const lists = <>
     <li><a className="dark2 hover:bg-orange-300" href="#header">Portfolio</a></li>
@@ -20,8 +26,27 @@ function App() {
     </a></li>
   </>
 
+  const downloadPdf = () => {
+    //
+    const input = pdfRef.current;
+    html2canvas(input).then((canvas) => {
+      const imgData = canvas.toDataURL('image/png');
+      const pdf = new jsPDF('p', 'mm', 'a4', true);
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = pdf.internal.pageSize.getHeight();
+      const imgWidth = canvas.width;
+      const imgHeight = canvas.height;
+      const ratio = Math.min(pdfWidth / imgWidth, pdfHeight / imgHeight);
+      const imgX = (pdfWidth - imgWidth * ratio) / 2;
+      const imgY = 30;
+
+      pdf.addImage(imgData, 'PNG', imgX, imgY, imgWidth * ratio, imgHeight * ratio);
+      pdf.save("portfolio.pdf")
+    });
+  };
+
   return (
-    <div className='font-lato space-y-10 ' >
+    <div className='font-lato space-y-10 ' ref={pdfRef}>
 
       <div className="navbar  justify-center sticky top-0  bg-opacity-5 bg-orange-500 z-10 -mb-10">
         {/* hidden nav list for mobile */}
@@ -52,7 +77,7 @@ function App() {
         </nav >
       </div>
 
-      <Heading />
+      <Heading downloadPdf={downloadPdf} />
 
       <About />
 

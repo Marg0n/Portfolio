@@ -1,8 +1,9 @@
 import { FaDownload, FaPhoneAlt } from "react-icons/fa";
 import '../App.css'
+import { PropTypes } from 'prop-types';
 
 
-const Heading = () => {
+const Heading = ({downloadPdf}) => {
 
    
     return (
@@ -28,7 +29,10 @@ const Heading = () => {
                         </div>
 
                         <div className="gap-4 lg:ml-56 flex flex-col-reverse md:flex-row justify-center items-center">
-                            <button className="btn btn-customized">
+                            <button 
+                            onClick={downloadPdf}
+                            className="btn btn-customized"
+                            >
                                 <FaDownload /> Download CV
                             </button>
                             <button className="btn">
@@ -45,5 +49,9 @@ const Heading = () => {
         </>
     );
 };
+
+Heading.propTypes = {
+    downloadPdf : PropTypes.func, 
+}
 
 export default Heading;
