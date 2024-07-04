@@ -5,7 +5,7 @@ import Heading from './components/Heading'
 function App() {
 
   return (
-    <div className='font-lato'>
+    <div className='font-lato space-y-6'>
 
       <Heading/>
 
