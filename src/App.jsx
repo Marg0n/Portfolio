@@ -46,7 +46,7 @@ function App() {
   };
 
   return (
-    <div className='font-lato space-y-10 ' ref={pdfRef}  id="header">
+    <div className='font-lato space-y-10 w-screen' ref={pdfRef}  id="header">
 
       <div className="navbar  justify-center sticky top-0  bg-opacity-5 bg-orange-500 z-10 -mb-10">
         {/* hidden nav list for mobile */}

@@ -5,7 +5,7 @@ const RecentProjects = () => {
     return (
         <>
             <div className="hero flex flex-col my-6" id="projects">
-                <div className="hero-content text-text-center w-3/4 h-3/4 shadow-2xl bg-opacity-5 bg-orange-500 flex flex-col">
+                <div className="hero-content text-text-center md:w-3/4 min-h-3/4 shadow-2xl bg-opacity-5 bg-orange-500 flex flex-col">
 
                     <div>
                         <h1 className="text-5xl font-bold text-center">Current Projects</h1>

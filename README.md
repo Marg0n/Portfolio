@@ -2,6 +2,10 @@
 
 Hi! I am Sokhorio Margon D' Costa, a MERN stack web developer. I love coding, as it gives me the feelings of fulfillment. I also love to learn, know and work more about it.
 
+# Live Site
+
+[Portfolio of Sokhorio Margon D' Costa](https://smd-porfolio.netlify.app)
+
 # Technologies used in this
 
 To have a better performance I have used the following:

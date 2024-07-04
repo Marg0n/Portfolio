@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 const Card = ({name, descp, lang, link}) => {
     return (
         <>
-            <Link to={link} target='blank' className="card bg-base-100 w-96 shadow-xl p-4 group hover:scale-105">
+            <Link to={link} target='blank' className="card bg-base-100 md:w-96 shadow-xl p-4 group hover:scale-105">
                 <figure className='flex justify-center items-center gap-4'>
                     <img
                         src={js}
