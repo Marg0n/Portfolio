@@ -14,7 +14,7 @@ const RecentProjects = () => {
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 grid-cols-1 gap-8">
+                    <div className="grid lg:grid-cols-2 grid-cols-1 gap-8">
                         <Card name='MediHouse_Client' descp='A robust Diagnostic Center Management System, a full-stack web application that effectively manages appointments, patient records, test results, and administrative tasks for a diagnostic center.' lang=' MERN stack' link='https://github.com/Marg0n/MediHouse_Client'/>
                         <Card name=' Horizon' descp='A robust tourism management website. A tourism-focused website, but not just any tourism!' lang=' MERN stack' link="https://github.com/Marg0n/tourism_management_client"/>
                         <Card name=' Word Insight' descp='A Blog based website.' lang=' MERN stack' link="https://github.com/Marg0n/word_insight_client"/>

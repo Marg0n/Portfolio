@@ -9,8 +9,9 @@ import './App.css'
 import { HiMenuAlt1 } from "react-icons/hi";
 
 import { jsPDF } from "jspdf";
-import html2canvas from "html2canvas";
+import html2canvas from "html2canvas-pro";
 import { useRef } from 'react'
+import { FcDownload } from 'react-icons/fc'
 
 function App() {
 
@@ -27,7 +28,8 @@ function App() {
   </>
 
   const downloadPdf = () => {
-    //
+
+    // download pdf
     const input = pdfRef.current;
     html2canvas(input).then((canvas) => {
       const imgData = canvas.toDataURL('image/png');
@@ -38,7 +40,7 @@ function App() {
       const imgHeight = canvas.height;
       const ratio = Math.min(pdfWidth / imgWidth, pdfHeight / imgHeight);
       const imgX = (pdfWidth - imgWidth * ratio) / 2;
-      const imgY = 30;
+      const imgY = 0;
 
       pdf.addImage(imgData, 'PNG', imgX, imgY, imgWidth * ratio, imgHeight * ratio);
       pdf.save("portfolio.pdf")
@@ -46,9 +48,18 @@ function App() {
   };
 
   return (
-    <div className='font-lato space-y-10 w-screen' ref={pdfRef}  id="header">
+    <div className='font-lato space-y-10 w-screen' ref={pdfRef} id="header">
 
       <div className="navbar  justify-center sticky top-0  bg-opacity-5 bg-orange-500 z-10 -mb-10">
+
+        {/* Download */}
+        <button
+          onClick={downloadPdf}
+          className="btn btn-circle btn-warning absolute right-10 animate-pulse hover:animate-none"
+        >
+          <FcDownload size={25}/>
+        </button>
+
         {/* hidden nav list for mobile */}
         <div className="dropdown absolute left-8 ">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-[primary-color] lg:hidden">

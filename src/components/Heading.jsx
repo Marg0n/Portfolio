@@ -4,9 +4,9 @@ import { PropTypes } from 'prop-types';
 import Pimg from "../assets/images/SMD.png";
 
 
-const Heading = ({downloadPdf}) => {
+const Heading = ({ downloadPdf }) => {
 
-   
+
     return (
         <>
             <header
@@ -15,7 +15,7 @@ const Heading = ({downloadPdf}) => {
             >
 
 
-               
+
 
                 <div className="banner flex lg:flex-row flex-col w-full">
                     <div className="w-4/6">
@@ -30,15 +30,17 @@ const Heading = ({downloadPdf}) => {
                         </div>
 
                         <div className="gap-4 lg:ml-56 flex flex-col-reverse md:flex-row justify-center items-center">
-                            <button 
-                            onClick={downloadPdf}
-                            className="btn btn-customized"
+                            <button
+                                onClick={downloadPdf}
+                                className="btn btn-customized"
                             >
                                 <FaDownload /> Download CV
                             </button>
-                            <button className="btn">
-                                <FaPhoneAlt /> Contact
-                            </button>
+                            <a href="#contact">
+                                <button className="btn" >
+                                    <FaPhoneAlt /> Contact
+                                </button>
+                            </a>
                         </div>
                     </div>
 
@@ -52,7 +54,7 @@ const Heading = ({downloadPdf}) => {
 };
 
 Heading.propTypes = {
-    downloadPdf : PropTypes.func, 
+    downloadPdf: PropTypes.func,
 }
 
 export default Heading;
