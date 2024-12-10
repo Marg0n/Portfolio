@@ -48,7 +48,7 @@ function App() {
   };
 
   return (
-    <div className='font-lato space-y-10 w-screen' ref={pdfRef} id="header">
+    <div className='font-lato space-y-10 w-screen' id="header">
 
       <div className="navbar  justify-center sticky top-0  bg-opacity-5 bg-orange-500 z-10 -mb-10">
 
@@ -57,7 +57,7 @@ function App() {
           onClick={downloadPdf}
           className="btn btn-circle btn-warning absolute right-10 animate-pulse hover:animate-none"
         >
-          <FcDownload size={25}/>
+          <FcDownload size={25} />
         </button>
 
         {/* hidden nav list for mobile */}
@@ -88,15 +88,18 @@ function App() {
         </nav >
       </div>
 
-      <Heading downloadPdf={downloadPdf} />
+      <div ref={pdfRef}>
+        <Heading downloadPdf={downloadPdf} />
 
-      <About />
+        <About />
 
-      <Skills />
+        <Skills />
 
-      <RecentProjects />
+        <RecentProjects />
 
-      <Footer />
+        <Footer />
+      </div>
+
 
     </div>
   )
