@@ -43,7 +43,7 @@ function App() {
       const imgY = 0;
 
       pdf.addImage(imgData, 'PNG', imgX, imgY, imgWidth * ratio, imgHeight * ratio);
-      pdf.save("portfolio.pdf")
+      pdf.save("portfolio of Sokhorio Margon D' Costa.pdf")
     });
   };
 
@@ -74,7 +74,7 @@ function App() {
 
 
         {/* name */}
-        <nav className="nav-title dark1 flex justify-around w-full" >
+        <nav className="nav-title dark1 md:flex justify-around w-full hidden" >
           <h3>Ma<span className="primary-color">r</span>gon</h3>
 
           <div className="hidden lg:flex">
