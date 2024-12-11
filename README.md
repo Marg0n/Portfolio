@@ -17,3 +17,16 @@ To have a better performance I have used the following:
 - [React Router Dom](https://reactrouter.com/en/main)
 - [html2canvas](https://www.npmjs.com/package/html2canvas/v/1.4.1)
 - [jsPDF](https://www.npmjs.com/package/jspdf)
+- [React-router-dom](https://www.npmjs.com/package/react-router-dom)
+
+    ```bash
+    npm i react-router-dom
+    ```
+
+- [React Router Hash Link](https://www.npmjs.com/package/react-router-hash-link)
+
+    ```bash
+    npm i react-router-hash-link
+    ```
+
+
