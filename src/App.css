@@ -13,6 +13,10 @@ body {
   color: #fd6e0a;
 }
 
+.secondary-color {
+  color: cornflowerblue;
+}
+
 .btn-customized {
   height: 64px;
   border-radius: 5px;
@@ -125,4 +129,9 @@ nav a {
   width: 584px;
   height: 676px;
   object-fit: contain;
+}
+
+/* description for recent projects */
+.description { 
+  white-space: pre-line; 
 }

@@ -6,10 +6,10 @@ import node from "../assets/images/icons/nodejs.png";
 import react from "../assets/images/icons/react.png";
 import { Link } from 'react-router-dom';
 
-const Card = ({name, descp, lang, link}) => {
+const Card = ({name='', descp=``, lang='', link=''}) => {
     return (
         <>
-            <Link to={link} target='blank' className="card bg-base-100 md:w-96 shadow-xl p-4 group hover:scale-105">
+            <Link to={link} target='blank' className="card bg-base-100 w-full shadow-md transition-shadow shadow-[#fd6e0a] hover:shadow-[cornflowerblue] p-4 group hover:scale-105 justify-center items-center">
                 <figure className='flex justify-center items-center gap-4'>
                     <img
                         src={js}
@@ -26,7 +26,7 @@ const Card = ({name, descp, lang, link}) => {
                 </figure>
                 <div className="card-body mt-2">
                     <h2 className="card-title hover:scale-105 primary-color">{name}</h2>
-                    <p>{descp}</p>
+                    <p className="description">{descp}</p>
                     <div className="card-actions justify-end">
                         Tech: {lang}
                     </div>
@@ -41,6 +41,7 @@ Card.propTypes = {
     descp : PropTypes.string,
     lang : PropTypes.string,
     link : PropTypes.string,
+    live : PropTypes.string,
 }
 
 export default Card;
