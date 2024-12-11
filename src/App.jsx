@@ -22,7 +22,7 @@ function App() {
     <li><a className="dark2 hover:bg-orange-300" href="#about">About Me</a></li>
     <li><a className="dark2 hover:bg-orange-300" href="#skills">Skills</a></li>
     <li><a className="dark2 hover:bg-orange-300" href="#projects">Projects</a></li>
-    <li><a href="#contact" className="lg:hidden  hover:bg-base-100">
+    <li><a href="#contact" className="lg:hidden  hover:bg-red-200">
       <button className="primary-color font-bold font-serif">Hire Me</button>
     </a></li>
   </>
@@ -80,8 +80,8 @@ function App() {
           <div className="hidden lg:flex">
             <ul className="menu menu-horizontal px-1 items-center">
               {lists}
-              <li ><a href="#contact">
-                <button className="btn-customized">Hire Me</button>
+              <li ><a href="#contact" className="p-0 ">
+                <button id='hire' className="btn-customized hover:dark2">Hire Me</button>
               </a></li>
             </ul>
           </div>

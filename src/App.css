@@ -34,6 +34,12 @@ body {
   color: #757575;
 }
 
+#hire:hover {
+  background-color: cornflowerblue;
+  border: cornflowerblue;
+  color: #fff;
+}
+
 /* nav bar */
 
 /* nav {
