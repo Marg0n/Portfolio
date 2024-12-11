@@ -12,19 +12,39 @@ import { jsPDF } from "jspdf";
 import html2canvas from "html2canvas-pro";
 import { useRef } from 'react'
 import { FcDownload } from 'react-icons/fc'
+import { NavHashLink } from 'react-router-hash-link'
 
 function App() {
 
   const pdfRef = useRef();
 
   const lists = <>
-    <li><a className="dark2 hover:bg-orange-300" href="#header">Portfolio</a></li>
-    <li><a className="dark2 hover:bg-orange-300" href="#about">About Me</a></li>
-    <li><a className="dark2 hover:bg-orange-300" href="#skills">Skills</a></li>
-    <li><a className="dark2 hover:bg-orange-300" href="#projects">Projects</a></li>
-    <li><a href="#contact" className="lg:hidden  hover:bg-red-200">
-      <button className="primary-color font-bold font-serif">Hire Me</button>
-    </a></li>
+    <li>
+      <NavHashLink className="dark2 hover:bg-orange-300 btn btn-ghost" to="#header" smooth>
+        Portfolio
+      </NavHashLink>
+    </li>
+    <li>
+      <NavHashLink smooth className="dark2 hover:bg-orange-300 btn btn-ghost" to="#about">
+        About Me
+      </NavHashLink>
+    </li>
+    <li>
+      <NavHashLink smooth className="dark2 hover:bg-orange-300 btn btn-ghost" to="#skills">
+        Skills
+      </NavHashLink>
+    </li>
+    <li><NavHashLink smooth className="dark2 hover:bg-orange-300 btn btn-ghost" to="#projects">
+      Projects
+    </NavHashLink>
+    </li>
+    <li>
+      <NavHashLink smooth to="#contact" className="lg:hidden btn btn-ghost hover:bg-red-200">
+        <button className="primary-color font-bold font-serif">
+          Hire Me
+        </button>
+      </NavHashLink>
+    </li>
   </>
 
   const downloadPdf = () => {

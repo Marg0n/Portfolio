@@ -29,7 +29,7 @@ const Heading = ({ downloadPdf }) => {
                             </p>
                         </div>
 
-                        <div className="gap-4 lg:ml-56 flex flex-col-reverse md:flex-row justify-center items-center">
+                        {/* <div className="gap-4 lg:ml-56 flex flex-col-reverse md:flex-row justify-center items-center">
                             <button
                                 onClick={downloadPdf}
                                 className="btn btn-customized"
@@ -41,7 +41,7 @@ const Heading = ({ downloadPdf }) => {
                                     <FaPhoneAlt /> Contact
                                 </button>
                             </a>
-                        </div>
+                        </div> */}
                     </div>
 
                     <div className="">
