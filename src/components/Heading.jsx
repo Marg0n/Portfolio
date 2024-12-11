@@ -34,7 +34,7 @@ const Heading = ({ downloadPdf }) => {
                                 onClick={downloadPdf}
                                 className="btn btn-customized"
                             >
-                                <FaDownload /> Download CV
+                                <FaDownload /> Download Page
                             </button>
                             <a href="#contact">
                                 <button className="btn" >
