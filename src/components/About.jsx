@@ -3,7 +3,7 @@ import Pimg from "../assets/images/SMD.png"
 const About = () => {
     return (
         <>
-            <div className="hero  min-h-screen" id="about">
+            <div className="hero mt-28 min-h-screen" id="about">
                 <div className="hero-content text-center md:w-3/4 min-h-3/4 shadow-2xl bg-opacity-5 bg-orange-500 flex flex-col">
                     <div className="max-w-xl ">
                         <h1 className="text-5xl font-bold">About Me</h1>
