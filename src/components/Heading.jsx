@@ -1,7 +1,7 @@
 import { FaDownload, FaPhoneAlt } from "react-icons/fa";
 import '../App.css'
 import { PropTypes } from 'prop-types';
-import Pimg from "../assets/images/SMD.png";
+import Pic from "../assets/images/SMD.png";
 
 
 const Heading = ({ downloadPdf }) => {
@@ -45,7 +45,7 @@ const Heading = ({ downloadPdf }) => {
                     </div>
 
                     <div className="">
-                        <img id="profile-pic" src={Pimg} alt="" />
+                        <img id="profile-pic" src={Pic} alt="" />
                     </div>
                 </div>
             </header >
