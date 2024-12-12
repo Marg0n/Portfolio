@@ -29,4 +29,10 @@ To have a better performance I have used the following:
     npm i react-router-hash-link
     ```
 
+- [aos](https://michalsnik.github.io/aos/)
+
+    ```bash
+    npm i aos
+    ```
+
 

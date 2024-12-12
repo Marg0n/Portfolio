@@ -43,7 +43,7 @@ const Footer = () => {
                     </div>
                 </nav>
                 <aside>
-                    <p>Copyright © {new Date().getFullYear()} - All right reserved by <span className="hover:cursor-pointer primary-color" title="monondcosta@gmail.com">Soknohio Margon D&apos; Costa</span></p>
+                    <p>Copyright © {new Date().getFullYear()} - All right reserved by <span className="hover:cursor-pointer primary-color hover:text-[cornflowerblue]" title="monondcosta@gmail.com">Sokhorio Margon D&apos; Costa</span></p>
                 </aside>
             </footer>
         </>

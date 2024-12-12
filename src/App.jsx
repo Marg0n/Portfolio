@@ -39,10 +39,10 @@ function App() {
     </NavHashLink>
     </li>
     <li>
-      <NavHashLink smooth to="#contact" className="lg:hidden btn btn-ghost hover:bg-red-200">
-        <button className="primary-color font-bold font-serif">
+      <NavHashLink smooth to="#contact" className="lg:hidden btn btn-ghost hover:bg-red-200 primary-color font-bold font-serif">
+        {/* <button className=""> */}
           Hire Me
-        </button>
+        {/* </button> */}
       </NavHashLink>
     </li>
   </>
