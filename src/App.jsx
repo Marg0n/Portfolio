@@ -39,10 +39,10 @@ function App() {
     </NavHashLink>
     </li>
     <li>
-      <NavHashLink smooth to="#contact" className="lg:hidden btn btn-ghost hover:bg-red-200 primary-color font-bold font-serif">
-        {/* <button className=""> */}
+      <NavHashLink smooth className="lg:hidden btn btn-ghost hover:bg-red-200 group" to="#contact" >
+        <button className="primary-color font-bold font-serif group-hover:text-black">
           Hire Me
-        {/* </button> */}
+        </button>
       </NavHashLink>
     </li>
   </>
@@ -100,9 +100,11 @@ function App() {
           <div className="hidden lg:flex">
             <ul className="menu menu-horizontal px-1 items-center">
               {lists}
-              <li ><a href="#contact" className="p-0 ">
-                <button id='hire' className="btn-customized hover:dark2">Hire Me</button>
-              </a></li>
+              <li >
+                <NavHashLink smooth to="#contact" className="p-0 ">
+                  <button id='hire' className="btn-customized hover:dark2">Hire Me</button>
+                </NavHashLink>
+              </li>
             </ul>
           </div>
         </nav >
