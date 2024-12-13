@@ -1,4 +1,6 @@
+import { useEffect } from "react";
 import Card from "./Card";
+import AOS from "aos";
 
 const description = `Our group project, Best Deal, is set to revolutionize online marketplaces by building a comprehensive Multi-Vendor eCommerce Platform. This platform is designed to accommodate multiple vendors, allowing them to independently manage and sell their products. Buyers benefit from a seamless experience, enabling them to browse, search, and purchase products from various vendors, all within a single, cohesive platform.
 
@@ -10,7 +12,28 @@ Built on the robust MERN stack (MongoDB, Express, React, Node.js), our platform 
 
 Explore more about our project at: https://best-deal-909.web.app`;
 
+
 const RecentProjects = () => {
+
+    // AOS animation useEffect
+    useEffect(() => {
+        AOS.init({
+            duration: 500,
+            once: false,
+            mirror: true,
+        });
+
+        const handleScroll = () => {
+            AOS.refresh();
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <>
             <div className="hero flex flex-col my-6  justify-center items-center" id="projects">
@@ -29,6 +52,8 @@ const RecentProjects = () => {
                             descp={description}
                             lang='MERN stack'
                             link="https://best-deal-909.web.app"
+                            data-aos="fade-up"
+                            data-aos-duration="2000"
                         />
 
 
