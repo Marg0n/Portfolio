@@ -7,6 +7,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import ErrorPage from './pages/ErrorPage';
+import 'aos/dist/aos.css';
 
 const router = createBrowserRouter([
   {
