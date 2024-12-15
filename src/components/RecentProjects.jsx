@@ -19,16 +19,19 @@ const RecentProjects = () => {
     useEffect(() => {
         AOS.init({
             duration: 500,
-            once: false,
-            mirror: true,
+            once: false,//Ensures that animations happen every time the element comes into view (not just the first time).
+            mirror: true,//Allows animations to happen both when scrolling up and down.
         });
 
+        // refresh AOS animations
         const handleScroll = () => {
             AOS.refresh();
         };
 
+        // scroll event listener to the window object
         window.addEventListener('scroll', handleScroll);
 
+        // Cleanup Function
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
@@ -37,7 +40,11 @@ const RecentProjects = () => {
     return (
         <>
             <div className="hero flex flex-col my-6  justify-center items-center" id="projects">
-                <div className="hero-content text-text-center md:w-3/4 min-h-3/4 shadow-2xl bg-opacity-5 bg-orange-500 flex flex-col">
+                <div
+                    className="hero-content text-text-center md:w-3/4 min-h-3/4 shadow-2xl bg-opacity-5 bg-orange-500 flex flex-col"
+                    data-aos="fade-up"
+                    data-aos-duration="2000"
+                >
 
                     <div className="flex flex-col justify-center items-center">
                         <h1 className="text-5xl font-bold text-center">Recent Projects</h1>
@@ -52,8 +59,8 @@ const RecentProjects = () => {
                             descp={description}
                             lang='MERN stack'
                             link="https://best-deal-909.web.app"
-                            data-aos="fade-up"
-                            data-aos-duration="2000"
+                            aos="fade-left"
+                            aosDuration="2000"
                         />
 
 
@@ -62,6 +69,8 @@ const RecentProjects = () => {
                             descp='A robust Diagnostic Center Management System, a full-stack web application that effectively manages appointments, patient records, test results, and administrative tasks for a diagnostic center.'
                             lang=' MERN stack'
                             link='https://medihouse.netlify.app'
+                            aos="fade-right"
+                            aosDuration="2000"
                         />
 
                         <Card
@@ -69,6 +78,8 @@ const RecentProjects = () => {
                             descp='A robust tourism management website. A tourism-focused website, but not just any tourism! Find out more information here!'
                             lang=' MERN stack'
                             link="https://tourism-management-client.web.app"
+                            aos="fade-up"
+                            aosDuration="2000"
                         />
 
                         <Card
@@ -76,6 +87,8 @@ const RecentProjects = () => {
                             descp='A Blog focused website. Here any user can create account. Then they can read, write and bookmark blogs.'
                             lang=' MERN stack'
                             link="https://worldinsight.netlify.app"
+                            aos="fade-down"
+                            aosDuration="2000"
                         />
                     </div>
                 </div>

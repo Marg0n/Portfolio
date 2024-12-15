@@ -6,23 +6,23 @@ import node from "../assets/images/icons/nodejs.png";
 import react from "../assets/images/icons/react.png";
 import { Link } from 'react-router-dom';
 
-const Card = ({name='', descp=``, lang='', link=''}) => {
+const Card = ({name='', descp='', lang='', link='', aos = '', aosDuration = ''}) => {
     return (
         <>
-            <Link to={link} target='blank' className="card bg-base-100 w-full shadow-md transition-shadow shadow-[#fd6e0a] hover:shadow-[cornflowerblue] p-4 group hover:scale-105 justify-center items-center">
+            <Link to={link} target='blank' className="card bg-base-100 w-full shadow-md transition-shadow shadow-[#fd6e0a] hover:shadow-[cornflowerblue] p-4 group hover:scale-105 justify-center items-center" data-aos={aos} data-aos-duration={aosDuration}>
                 <figure className='flex justify-center items-center gap-4'>
                     <img
                         src={js}
-                        alt="" />
+                        alt="JavaScript" />
                     <img
                         src={mongo}
-                        alt="" />
+                        alt="MongoDB" />
                     <img
                         src={node}
-                        alt="" />
+                        alt="Node.js" />
                     <img
                         src={react}
-                        alt="" />
+                        alt="React" />
                 </figure>
                 <div className="card-body mt-2">
                     <h2 className="card-title hover:scale-105 primary-color">{name}</h2>
@@ -42,6 +42,8 @@ Card.propTypes = {
     lang : PropTypes.string,
     link : PropTypes.string,
     live : PropTypes.string,
+    aos: PropTypes.string, 
+    aosDuration: PropTypes.string,
 }
 
 export default Card;
