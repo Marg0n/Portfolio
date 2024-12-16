@@ -13,28 +13,46 @@ import html2canvas from "html2canvas-pro";
 import { useRef } from 'react'
 import { FcDownload } from 'react-icons/fc'
 import { NavHashLink } from 'react-router-hash-link'
+import { useLocation } from 'react-router-dom'
 
 function App() {
 
   const pdfRef = useRef();
+  // hash links
+  const {hash} = useLocation();
 
   const lists = <>
     <li>
-      <NavHashLink className="dark2 hover:bg-orange-300 btn btn-ghost" to="#header" smooth>
+      <NavHashLink
+        className={hash === "#header" ? "text-red-500 dark2 btn btn-ghost" : "dark2 hover:bg-orange-300 btn btn-ghost"}
+        to="#header"
+        smooth
+      >
         Portfolio
       </NavHashLink>
     </li>
     <li>
-      <NavHashLink smooth className="dark2 hover:bg-orange-300 btn btn-ghost" to="#about">
+      <NavHashLink
+        smooth
+        className={hash === "#about" ? "text-red-500 dark2 btn btn-ghost" : "dark2 hover:bg-orange-300 btn btn-ghost"}
+        to="#about"
+      >
         About Me
       </NavHashLink>
     </li>
     <li>
-      <NavHashLink smooth className="dark2 hover:bg-orange-300 btn btn-ghost" to="#skills">
+      <NavHashLink
+        smooth
+        className={hash === "#skills" ? "text-red-500 dark2 btn btn-ghost" : "dark2 hover:bg-orange-300 btn btn-ghost"}
+        to="#skills"
+      >
         Skills
       </NavHashLink>
     </li>
-    <li><NavHashLink smooth className="dark2 hover:bg-orange-300 btn btn-ghost" to="#projects">
+    <li><NavHashLink
+      smooth
+      className={hash === "#projects" ? "text-red-500 dark2 btn btn-ghost" : "dark2 hover:bg-orange-300 btn btn-ghost"}
+      to="#projects">
       Projects
     </NavHashLink>
     </li>
@@ -70,6 +88,7 @@ function App() {
   return (
     <div className='font-lato space-y-10 w-screen' id="header">
 
+      {/* navbar */}
       <div className="navbar  justify-center sticky top-0  bg-opacity-5 bg-orange-500 z-10 -mb-10">
 
         {/* Download */}
@@ -97,6 +116,7 @@ function App() {
         <nav className="nav-title dark1 md:flex justify-around w-full hidden" >
           <h3>Ma<span className="primary-color">r</span>gon</h3>
 
+          {/* nav for bigger screen */}
           <div className="hidden lg:flex">
             <ul className="menu menu-horizontal px-1 items-center">
               {lists}
