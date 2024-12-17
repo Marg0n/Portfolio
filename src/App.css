@@ -59,6 +59,17 @@ body {
   font-size: 45px;
   font-weight: 800;
 }
+.nav-title-sliding {
+  /* position: fixed; */
+  right: -3000px; /* Start hidden to the right */
+  /*top: 5px;  Adjust top position as needed */
+  transition: right 0.3s ease-in-out;
+}
+
+.nav-title-sliding.visible {
+  right: 10px; /* Adjust to the position where you want it to pop out */
+}
+
 
 nav > ul {
   display: flex;

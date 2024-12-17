@@ -10,7 +10,7 @@ import { HiMenuAlt1 } from "react-icons/hi";
 
 import { jsPDF } from "jspdf";
 import html2canvas from "html2canvas-pro";
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { FcDownload } from 'react-icons/fc'
 import { NavHashLink } from 'react-router-hash-link'
 import { useLocation } from 'react-router-dom'
@@ -19,7 +19,7 @@ function App() {
 
   const pdfRef = useRef();
   // hash links
-  const {hash} = useLocation();
+  const { hash } = useLocation();
 
   const lists = <>
     <li>
@@ -85,8 +85,18 @@ function App() {
     });
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const navTitle = document.querySelector('.nav-title-sliding'); 
+      if (window.scrollY < 100) { // Adjust the scroll position as needed 
+        navTitle.classList.add('visible');
+      } else { navTitle.classList.remove('visible'); }
+    }; 
+    window.addEventListener('scroll', handleScroll); return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className='font-lato space-y-10 w-screen' id="header">
+    <div className='font-lato space-y-10 max-w-screen' id="header">
 
       {/* navbar */}
       <div className="navbar  justify-center sticky top-0  bg-opacity-5 bg-orange-500 z-10 -mb-10">
@@ -112,8 +122,21 @@ function App() {
         </div >
 
 
+        {/* nav list after scrolling */}
+        {/* <div className="dropdown absolute right-96 top-60">
+          <div tabIndex={0} role="button" className="btn btn-ghost btn-[primary-color]">
+            <HiMenuAlt1 size={25} className="primary-color" />
+          </div>
+          <ul
+            tabIndex={0}
+            className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+            {lists}
+          </ul>
+        </div > */}
+
+
         {/* name */}
-        <nav className="nav-title dark1 md:flex justify-around w-full hidden" >
+        <nav className="nav-title nav-title-sliding dark1 md:flex justify-around w-full hidden" >
           <h3>Ma<span className="primary-color">r</span>gon</h3>
 
           {/* nav for bigger screen */}
