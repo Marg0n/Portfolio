@@ -85,21 +85,34 @@ function App() {
     });
   };
 
+  // scrolling effect
   useEffect(() => {
+    const navTitle = document.querySelector('.nav-title-sliding');
+    const dropdown = document.querySelector('.dropdown-sliding');
+
+    // Ensure navTitle is visible initially
+    navTitle.classList.add('visible');
+
     const handleScroll = () => {
-      const navTitle = document.querySelector('.nav-title-sliding'); 
-      if (window.scrollY < 100) { // Adjust the scroll position as needed 
+      if (window.scrollY < 1) {
         navTitle.classList.add('visible');
-      } else { navTitle.classList.remove('visible'); }
-    }; 
-    window.addEventListener('scroll', handleScroll); return () => window.removeEventListener('scroll', handleScroll);
+        dropdown.classList.remove('visible');
+      } else {
+        navTitle.classList.remove('visible');
+        dropdown.classList.add('visible');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
 
   return (
     <div className='font-lato space-y-10 max-w-screen' id="header">
 
       {/* navbar */}
-      <div className="navbar  justify-center sticky top-0  bg-opacity-5 bg-orange-500 z-10 -mb-10">
+      <div className="navbar justify-center sticky top-0 bg-opacity-5 bg-orange-500 z-10 -mb-10">
 
         {/* Download */}
         <button
@@ -123,16 +136,21 @@ function App() {
 
 
         {/* nav list after scrolling */}
-        {/* <div className="dropdown absolute right-96 top-60">
-          <div tabIndex={0} role="button" className="btn btn-ghost btn-[primary-color]">
+        <div className="lg:visible xl:visible invisible dropdown dropdown-sliding dropdown-top dropdown-end absolute right-10 top-[90vh]">
+          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle btn-[primary-color]">
             <HiMenuAlt1 size={25} className="primary-color" />
           </div>
           <ul
             tabIndex={0}
-            className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+            className="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow-2xl">
             {lists}
+            <li >
+              <NavHashLink smooth to="#contact" className="btn btn-ghost hover:bg-red-200 group">
+                <button id='hire' className="primary-color font-bold font-serif group-hover:text-black">Hire Me</button>
+              </NavHashLink>
+            </li>
           </ul>
-        </div > */}
+        </div >
 
 
         {/* name */}

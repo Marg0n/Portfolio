@@ -60,16 +60,31 @@ body {
   font-weight: 800;
 }
 .nav-title-sliding {
-  /* position: fixed; */
-  right: -3000px; /* Start hidden to the right */
-  /*top: 5px;  Adjust top position as needed */
-  transition: right 0.3s ease-in-out;
+  /* position: fixed;
+  right: -3000px; Start hidden to the right 
+  transition: right 0.3s ease-in-out;*/
+  opacity: 0; /* Start hidden */ 
+  visibility: hidden; 
+  transition: visibility 1s, opacity 0.5s ease-in-out;
 }
 
 .nav-title-sliding.visible {
-  right: 10px; /* Adjust to the position where you want it to pop out */
+  /*right: 10px;  Adjust to the position where you want it to pop out */
+  opacity: 1; /* Make visible */ 
+  visibility: visible;
 }
 
+/* show when scrolling in large devices */
+.dropdown-sliding { 
+  visibility: hidden; 
+  opacity: 0; 
+  transition: visibility 0s, opacity 0.5s linear; 
+} 
+
+.dropdown-sliding.visible { 
+  visibility: visible; 
+  opacity: 1; 
+}
 
 nav > ul {
   display: flex;
