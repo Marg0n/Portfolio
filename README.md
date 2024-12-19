@@ -12,6 +12,11 @@ To have a better performance I have used the following:
 
 - [Prop-Types](https://www.npmjs.com/package/prop-types)
 - [React Icons](https://react-icons.github.io/react-icons/)
+
+    ```bash
+    npm install react-icons --save
+    ```
+
 - [Daisy UI](https://daisyui.com/)
 - [TailwindCSS](https://tailwindcss.com/)
 - [React Router Dom](https://reactrouter.com/en/main)

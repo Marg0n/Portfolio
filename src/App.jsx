@@ -136,7 +136,9 @@ function App() {
 
 
         {/* nav list after scrolling */}
-        <div className="lg:visible xl:visible invisible dropdown dropdown-sliding dropdown-top dropdown-end absolute right-10 top-[90vh]">
+        <div 
+        id='scroll-nav'
+        className="lg:visible xl:visible invisible dropdown dropdown-sliding dropdown-top dropdown-end absolute right-10 top-[90vh] animate-bounce hover:animate-none">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle btn-[primary-color]">
             <HiMenuAlt1 size={25} className="primary-color" />
           </div>
