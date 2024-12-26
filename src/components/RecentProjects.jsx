@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import Card from "./Card";
 import AOS from "aos";
+import { Helmet } from "react-helmet-async";
 
 const description = `Our group project, Best Deal, is set to revolutionize online marketplaces by building a comprehensive Multi-Vendor eCommerce Platform. This platform is designed to accommodate multiple vendors, allowing them to independently manage and sell their products. Buyers benefit from a seamless experience, enabling them to browse, search, and purchase products from various vendors, all within a single, cohesive platform.
 
@@ -39,6 +40,10 @@ const RecentProjects = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Sokhorio Margon D&apos; Costa | Projects</title>
+            </Helmet>
+
             <div className="hero flex flex-col my-6  justify-center items-center" id="projects">
                 <div
                     className="hero-content text-text-center md:w-3/4 min-h-3/4 shadow-2xl bg-opacity-5 bg-orange-500 flex flex-col"

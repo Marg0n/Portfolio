@@ -1,6 +1,7 @@
 import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { FcInvite, FcPhoneAndroid } from "react-icons/fc";
+import { Helmet } from "react-helmet-async";
 
 
 const Footer = () => {
@@ -9,6 +10,10 @@ const Footer = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Sokhorio Margon D&apos; Costa | Portfolio</title>
+            </Helmet>
+
             <footer id='contact' className="footer footer-center mt-12 text-base-content rounded p-10  bg-opacity-10 bg-orange-500">
                 {/* <nav className="grid grid-flow-col gap-4">
                     <a className="link link-hover">About us</a>
@@ -32,13 +37,13 @@ const Footer = () => {
                     <div className="grid grid-flow-col gap-4">
 
                         <Link to='https://linkedin.com/in/sokhorio-margon-d-costa-885823193' target="_blank" className="hover:scale-110">
-                            <FaLinkedinIn size={25}/>
+                            <FaLinkedinIn size={25} />
                         </Link>
                         <Link to='https://www.facebook.com/margon.dcosta/' target="_blank" className="hover:scale-110">
-                            <FaFacebookF  size={25}/>
+                            <FaFacebookF size={25} />
                         </Link>
                         <Link to='https://github.com/Marg0n' target="_blank" className="hover:scale-110">
-                        <FaGithub size={25}/>
+                            <FaGithub size={25} />
                         </Link>
                     </div>
                 </nav>

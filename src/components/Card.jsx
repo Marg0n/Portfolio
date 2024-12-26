@@ -1,9 +1,9 @@
 
 import { PropTypes } from 'prop-types';
-import js from "../assets/images/icons/js.png";
-import mongo from "../assets/images/icons/mongo.png";
-import node from "../assets/images/icons/nodejs.png";
-import react from "../assets/images/icons/react.png";
+import js from "../assets/icons/js.png";
+import mongo from "../assets/icons/mongo.png";
+import node from "../assets/icons/nodejs.png";
+import react from "../assets/icons/react.png";
 import { Link } from 'react-router-dom';
 
 const Card = ({name='', descp='', lang='', link='', aos = '', aosDuration = ''}) => {

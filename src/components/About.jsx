@@ -1,8 +1,13 @@
+import { Helmet } from "react-helmet-async";
 import Pimg from "../assets/images/SMD.png"
 
 const About = () => {
     return (
         <>
+            <Helmet>
+                <title>Sokhorio Margon D&apos; Costa | About Me</title>
+            </Helmet>
+
             <div className="hero mt-28 min-h-screen" id="about">
                 <div className="hero-content text-center md:w-3/4 min-h-3/4 shadow-2xl bg-opacity-5 bg-orange-500 flex flex-col">
                     <div className="max-w-xl ">
@@ -12,7 +17,7 @@ const About = () => {
                         </p>
                     </div
                     >
-                    
+
                     <div className="card lg:card-side bg-base-100 shadow-xl w-full">
                         <figure className="lg:w-1/3">
                             <img
@@ -25,15 +30,15 @@ const About = () => {
                             <div className="text-start items-center justify-center flex gap-8 ">
                                 <div>
                                     <p className="min-h-11">Name</p>
-                                    <p  className="min-h-11">Education</p>
-                                    <p  className="min-h-11">email</p>
-                                    <p  className="min-h-11">Current Location</p>
+                                    <p className="min-h-11">Education</p>
+                                    <p className="min-h-11">email</p>
+                                    <p className="min-h-11">Current Location</p>
                                 </div>
                                 <div className="font-bold font-serif">
-                                    <p  className="min-h-11">Sokhorio Margon D&apos; Costa</p>
-                                    <p  className="min-h-11">BSC in CSE, AIUB</p>
-                                    <p  className="min-h-11">monondcosta@gmail.com</p>
-                                    <p  className="min-h-11">Dhaka</p>
+                                    <p className="min-h-11">Sokhorio Margon D&apos; Costa</p>
+                                    <p className="min-h-11">BSC in CSE, AIUB</p>
+                                    <p className="min-h-11">monondcosta@gmail.com</p>
+                                    <p className="min-h-11">Dhaka</p>
                                 </div>
                             </div>
                         </div>

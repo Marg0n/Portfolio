@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useRouteError } from "react-router-dom";
 import Loader from "./../components/Loader";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -23,6 +24,10 @@ const ErrorPage = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Sokhorio Margon D&apos; Costa | 404</title>
+            </Helmet>
+
             {
                 loading ? <Loader />
                     :

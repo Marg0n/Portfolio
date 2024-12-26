@@ -4,6 +4,7 @@ import { PropTypes } from 'prop-types';
 import Pic from "../assets/images/SMD.png";
 import { useEffect } from "react";
 import AOS from "aos";
+import { Helmet } from "react-helmet-async";
 
 
 const Heading = ({ downloadPdf }) => {
@@ -29,13 +30,14 @@ const Heading = ({ downloadPdf }) => {
 
     return (
         <>
+            <Helmet>
+                <title>Sokhorio Margon D&apos; Costa | Portfolio</title>
+            </Helmet>
+
             <header
                 className="bg-no-repeat"
             // style={{ backgroundImage: `url(${'../src/assets/images/developer.png'})`, backgroundPosition: `left 1rem top 6rem` }}
             >
-
-
-
 
                 <div className="banner flex lg:flex-row flex-col w-full">
                     <div className="w-4/6">

@@ -40,4 +40,9 @@ To have a better performance I have used the following:
     npm i aos
     ```
 
+- [react-helmet-async](https://www.npmjs.com/package/react-helmet-async)
+
+    ```bash
+    npm i react-helmet-async
+    ```
 
