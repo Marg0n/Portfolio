@@ -14,6 +14,7 @@ import { useEffect, useRef } from 'react'
 import { FcDownload } from 'react-icons/fc'
 import { NavHashLink } from 'react-router-hash-link'
 import { useLocation } from 'react-router-dom'
+import tap from "../src/assets/icons/tap-gesture.gif"
 
 function App() {
 
@@ -140,7 +141,8 @@ function App() {
         id='scroll-nav'
         className="lg:visible xl:visible invisible dropdown dropdown-sliding dropdown-top dropdown-end absolute right-10 top-[90vh] animate-bounce hover:animate-none">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle btn-[primary-color]">
-            <HiMenuAlt1 size={25} className="primary-color" />
+            {/* <HiMenuAlt1 size={25} className="primary-color" /> */}
+            <img src={tap} alt={tap} className="w-10 h-10 rounded-full" />
           </div>
           <ul
             tabIndex={0}
