@@ -104,8 +104,22 @@ function App() {
       }
     };
 
+    const handleResize = () => { 
+      if (window.innerWidth < 1024) { 
+        dropdown.classList.remove('visible'); 
+      } 
+    };
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+
+    // Call handleResize initially to check the screen size on load 
+    handleResize();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
 
