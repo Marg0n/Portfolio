@@ -2,6 +2,7 @@ import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { FcInvite, FcPhoneAndroid } from "react-icons/fc";
 import { Helmet } from "react-helmet-async";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 
 const Footer = () => {
@@ -27,10 +28,17 @@ const Footer = () => {
                         Here is some contact information where you can contact me: <br />
                     </p>
                     <div className="flex text-base gap-2">
-                        <FcPhoneAndroid size={25} /> +880-1738667793
+                        <FcPhoneAndroid size={25} className="animate__animated animate__tada animate__infinite" /> +880-1738667793
                     </div>
-                    <div className="flex text-base gap-2">
-                        <FcInvite size={25} /> monondcosta@gmail.com
+                    <div className="flex text-base gap-2 justify-center items-center">
+                        <DotLottieReact
+                            src="https://lottie.host/f5995524-fcff-4e5c-8b23-df160d0edf8f/wWYqOLa7Wt.lottie"
+                            loop
+                            autoplay
+                            className="w-15 h-10 -mx-5 p-0"
+                        />
+                        {/* <FcInvite size={25} />  */}
+                        monondcosta@gmail.com
                     </div>
                 </div>
                 <nav>

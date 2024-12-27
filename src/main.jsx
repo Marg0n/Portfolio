@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import ErrorPage from './pages/ErrorPage';
 import 'aos/dist/aos.css';
+import 'animate.css';
 import { HelmetProvider } from 'react-helmet-async';
 
 const router = createBrowserRouter([

@@ -46,3 +46,34 @@ To have a better performance I have used the following:
     npm i react-helmet-async
     ```
 
+- [Animate.css](https://animate.style/)
+
+    ```bash
+    npm install animate.css --save
+    ```
+
+- [lottiefiles](https://lottiefiles.com/)
+
+    1. Install LottieFiles’ official React player: Open your project and install the following dependency via npm.
+
+        ```bash
+        npm install @lottiefiles/dotlottie-react
+        ```
+
+    2. Add the dotLottie component: Insert the dotLottie component to your React app where you want the animation to appear.
+
+        ```jsx
+        import React from 'react';
+        import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+
+        const App = () => {
+          return (
+            <DotLottieReact
+              src="path/to/animation.lottie"
+              loop
+              autoplay
+            />
+          );
+        };
+        ```
+
