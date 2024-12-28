@@ -1,12 +1,32 @@
 import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FcInvite, FcPhoneAndroid } from "react-icons/fc";
 import { Helmet } from "react-helmet-async";
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import { useEffect, useState } from "react";
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
 
 const Footer = () => {
 
+    const [animationClass, setAnimationClass] = useState(''); 
+    const { hash } = useLocation();
+    /**
+     * Destructuring Return Values:
+         - ref: A reference object to be assigned to the element you want to observe.
+         -isVisible: A boolean indicating whether the element is currently in the viewport.
+     * Options: { threshold: 0.1 }: The observer will trigger when 10% (0.1) of the target element is visible in the viewport.
+     */
+    const [ref, isVisible] = useIntersectionObserver({ threshold: 0.1 });
+
+    useEffect(() => {
+        if(hash === '#contact' || isVisible){
+            setAnimationClass('animate__animated animate__flash animate__repeat-2');
+        }
+        else { 
+            setAnimationClass(''); 
+        }
+    },[hash, isVisible]);
 
 
     return (
@@ -55,8 +75,8 @@ const Footer = () => {
                         </Link>
                     </div>
                 </nav>
-                <aside>
-                    <p>Copyright © {new Date().getFullYear()} - All right reserved by <span className="hover:cursor-pointer primary-color hover:text-[cornflowerblue]" title="monondcosta@gmail.com">Sokhorio Margon D&apos; Costa</span></p>
+                <aside ref={ref}>
+                    <p>Copyright © {new Date().getFullYear()} - All right reserved by <span className={`hover:cursor-pointer primary-color hover:text-[cornflowerblue] ${animationClass}`} title="monondcosta@gmail.com"> Sokhorio Margon D&apos; Costa</span></p>
                 </aside>
             </footer>
         </>
