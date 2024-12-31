@@ -1,4 +1,4 @@
-import { FaDownload, FaPhoneAlt } from "react-icons/fa";
+// import { FaDownload, FaPhoneAlt } from "react-icons/fa";
 import '../App.css'
 import { PropTypes } from 'prop-types';
 import Pic from "../assets/images/SMD.png";
