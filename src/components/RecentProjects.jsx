@@ -92,7 +92,7 @@ const RecentProjects = () => {
                             descp='A Blog focused website. Here any user can create account. Then they can read, write and bookmark blogs.'
                             lang=' MERN stack'
                             link="https://worldinsight.netlify.app"
-                            aos="fade-down"
+                            aos="fade-left"
                             aosDuration="2000"
                         />
                     </div>
