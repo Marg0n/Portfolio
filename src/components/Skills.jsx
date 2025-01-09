@@ -1,7 +1,29 @@
 import { Helmet } from "react-helmet-async";
+import AOS from "aos";
+import { useEffect } from "react";
 
 
 const Skills = () => {
+
+    // AOS animation useEffect
+    useEffect(() => {
+        AOS.init({
+            duration: 500,
+            once: false,
+            mirror: true,
+        });
+
+        const handleScroll = () => {
+            AOS.refresh();
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <>
             <Helmet>
@@ -13,7 +35,7 @@ const Skills = () => {
 
                     <div className="max-w-xl ">
                         <h1 className="text-5xl font-bold text-center">Skills Set</h1>
-                        <p className="py-6 text-justify">
+                        <p className="py-6 text-justify" data-aos="slide-up" data-aos-duration="2000">
                             From my university tenure to recent years, I have gained knowledge about various languages. But now, I am more proficient on  <strong className="primary-color">MERN stack</strong> web development. I am currently working more with <i className="primary-color">HTML</i>,  <i className="primary-color">CSS</i>, <i className="primary-color">Tailwind</i>, <i className="primary-color">JavaScript</i>, <i className="primary-color">React</i>, <i className="primary-color">Firebase</i>, <i className="primary-color">Node JS</i>, <i className="primary-color">Express JS</i>, <i className="primary-color">MongoDB</i> and <i className="primary-color">MySQL</i>. I am also a team player and can work in group environment.
                         </p>
                     </div>
