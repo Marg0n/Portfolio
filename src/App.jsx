@@ -132,7 +132,7 @@ function App() {
         {/* Download */}
         <button
           onClick={downloadPdf}
-          className="btn btn-circle btn-warning absolute right-10 animate-pulse hover:animate-none"
+          className="btn btn-circle bg-[#fd6e0a] bg-opacity-80 absolute right-10 animate-pulse hover:border-4 hover:border-x-[#fd6e0a] hover:border-y-[cornflowerblue] hover:animate-none"
         >
           <FcDownload size={25} />
         </button>
@@ -154,7 +154,7 @@ function App() {
         <div 
         id='scroll-nav'
         className="lg:visible xl:visible invisible dropdown dropdown-sliding dropdown-top dropdown-end absolute right-10 top-[90vh] animate-bounce hover:animate-none">
-          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle btn-[primary-color]">
+          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle hover:border-4 hover:border-y-[#fd6e0a] hover:border-x-[cornflowerblue] ">
             {/* <HiMenuAlt1 size={25} className="primary-color" /> */}
             <img src={tap} alt={tap} className="w-10 h-10 rounded-full" />
           </div>
