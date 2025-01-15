@@ -89,7 +89,7 @@ function App() {
   // scrolling effect
   useEffect(() => {
     const navTitle = document.querySelector('.nav-title-sliding');
-    const dropdown = document.querySelector('.dropdown-sliding');
+    const dropdown = document.querySelector('#scroll-nav');
 
     // Ensure navTitle is visible initially
     navTitle.classList.add('visible');
@@ -97,17 +97,26 @@ function App() {
     const handleScroll = () => {
       if (window.scrollY < 1) {
         navTitle.classList.add('visible');
-        dropdown.classList.remove('visible');
+        // dropdown.classList.remove('visible');
+        if (window.innerWidth <= 1024) { 
+          dropdown.classList.remove('visible'); 
+        } 
       } else {
         navTitle.classList.remove('visible');
-        dropdown.classList.add('visible');
+        // dropdown.classList.add('visible');
+        if (window.innerWidth >= 1024) { 
+          dropdown.classList.add('visible'); 
+        }
       }
     };
 
     const handleResize = () => { 
-      if (window.innerWidth < 1024) { 
+      if (window.innerWidth <= 1024) { 
         dropdown.classList.remove('visible'); 
       } 
+      else{
+        dropdown.classList.add('visible');
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -153,7 +162,7 @@ function App() {
         {/* nav list after scrolling */}
         <div 
         id='scroll-nav'
-        className="lg:visible xl:visible invisible dropdown dropdown-sliding dropdown-top dropdown-end absolute right-10 top-[90vh] animate-bounce hover:animate-none">
+        className="dropdown dropdown-top dropdown-end absolute right-10 top-[90vh] animate-bounce hover:animate-none">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle hover:border-4 hover:border-y-[#fd6e0a] hover:border-x-[cornflowerblue] ">
             {/* <HiMenuAlt1 size={25} className="primary-color" /> */}
             <img src={tap} alt={tap} className="w-10 h-10 rounded-full" />

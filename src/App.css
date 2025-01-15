@@ -75,13 +75,13 @@ body {
 }
 
 /* show when scrolling in large devices */
-.dropdown-sliding { 
+#scroll-nav { 
   visibility: hidden; 
   opacity: 0; 
   transition: visibility 0s, opacity 0.5s linear; 
 } 
 
-.dropdown-sliding.visible { 
+#scroll-nav.visible { 
   visibility: visible; 
   opacity: 1; 
 }
