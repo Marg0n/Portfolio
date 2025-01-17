@@ -98,12 +98,8 @@ function App() {
       if (window.scrollY < 1) {
         navTitle.classList.add('visible');
         dropdown.classList.remove('visible');
-        // if (window.innerWidth < 1024) { 
-        //   dropdown.classList.remove('visible'); 
-        // } 
       } else {
         navTitle.classList.remove('visible');
-        // dropdown.classList.add('visible');
         if (window.innerWidth >= 1024) { 
           dropdown.classList.add('visible'); 
         }
@@ -114,9 +110,6 @@ function App() {
       if (window.innerWidth < 1024) { 
         dropdown.classList.remove('visible'); 
       } 
-      // else{
-      //   dropdown.classList.add('visible');
-      // }
     };
 
     window.addEventListener('scroll', handleScroll);
