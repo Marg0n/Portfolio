@@ -15,6 +15,7 @@ import { FcDownload } from 'react-icons/fc'
 import { NavHashLink } from 'react-router-hash-link'
 import { useLocation } from 'react-router-dom'
 import tap from "../src/assets/icons/tap-gesture.gif"
+import useIntersectionObserver from './hooks/useIntersectionObserver'
 
 function App() {
 
@@ -123,6 +124,18 @@ function App() {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  // on screen section detection to highlight the navigation
+  const isVisible = useIntersectionObserver({ threshold: 0.1 });
+
+    useEffect(() => {
+        if(hash === '#contact' || isVisible){
+            // 
+        }
+        else { 
+            // 
+        }
+    },[isVisible]);
 
 
   return (
