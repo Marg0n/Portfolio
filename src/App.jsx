@@ -5,17 +5,16 @@ import Heading from './components/Heading'
 import RecentProjects from './components/RecentProjects'
 import Skills from './components/Skills'
 
+import { HiMenuAlt1 } from "react-icons/hi"
 import './App.css'
-import { HiMenuAlt1 } from "react-icons/hi";
 
-import { jsPDF } from "jspdf";
-import html2canvas from "html2canvas-pro";
+import html2canvas from "html2canvas-pro"
+import { jsPDF } from "jspdf"
 import { useEffect, useRef } from 'react'
 import { FcDownload } from 'react-icons/fc'
-import { NavHashLink } from 'react-router-hash-link'
 import { useLocation } from 'react-router-dom'
+import { NavHashLink } from 'react-router-hash-link'
 import tap from "../src/assets/icons/tap-gesture.gif"
-import useIntersectionObserver from './hooks/useIntersectionObserver'
 
 function App() {
 
@@ -23,11 +22,12 @@ function App() {
   // hash links
   const { hash } = useLocation();
 
+  // list of navigation
   const lists = <>
     <li>
       <NavHashLink
-        className={hash === "#header" ? "text-red-500 dark2 btn btn-ghost" : "dark2 hover:bg-orange-300 btn btn-ghost"}
-        to="#header"
+        className={hash === "#portfolio" ? "text-red-500 dark2 btn btn-ghost" : "dark2 hover:bg-orange-300 btn btn-ghost"}
+        to="#portfolio"
         smooth
       >
         Portfolio
@@ -67,6 +67,7 @@ function App() {
     </li>
   </>
 
+  // download pdf
   const downloadPdf = () => {
 
     // download pdf
@@ -101,16 +102,16 @@ function App() {
         dropdown.classList.remove('visible');
       } else {
         navTitle.classList.remove('visible');
-        if (window.innerWidth >= 1024) { 
-          dropdown.classList.add('visible'); 
+        if (window.innerWidth >= 1024) {
+          dropdown.classList.add('visible');
         }
       }
     };
 
-    const handleResize = () => { 
-      if (window.innerWidth < 1024) { 
-        dropdown.classList.remove('visible'); 
-      } 
+    const handleResize = () => {
+      if (window.innerWidth < 1024) {
+        dropdown.classList.remove('visible');
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -126,20 +127,11 @@ function App() {
   }, []);
 
   // on screen section detection to highlight the navigation
-  const isVisible = useIntersectionObserver({ threshold: 0.1 });
 
-    useEffect(() => {
-        if(hash === '#contact' || isVisible){
-            // 
-        }
-        else { 
-            // 
-        }
-    },[isVisible]);
 
 
   return (
-    <div className='font-lato space-y-10 max-w-screen' id="header">
+    <div className='font-lato space-y-10 max-w-screen' id="portfolio">
 
       {/* navbar */}
       <div className="navbar justify-center sticky top-0 bg-opacity-5 bg-orange-500 z-10 -mb-10">
@@ -166,9 +158,9 @@ function App() {
 
 
         {/* nav list after scrolling */}
-        <div 
-        id='scroll-nav'
-        className="dropdown dropdown-top dropdown-end absolute right-10 top-[90vh] animate-bounce hover:animate-none">
+        <div
+          id='scroll-nav'
+          className="dropdown dropdown-top dropdown-end absolute right-10 top-[90vh] animate-bounce hover:animate-none">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle hover:border-4 hover:border-y-[#fd6e0a] hover:border-x-[cornflowerblue] ">
             {/* <HiMenuAlt1 size={25} className="primary-color" /> */}
             <img src={tap} alt={tap} className="w-10 h-10 rounded-full" />
