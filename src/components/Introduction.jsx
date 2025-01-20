@@ -1,13 +1,13 @@
 // import { FaDownload, FaPhoneAlt } from "react-icons/fa";
-import '../App.css'
-import { PropTypes } from 'prop-types';
-import Pic from "../assets/images/SMD.png";
-import { useEffect } from "react";
 import AOS from "aos";
+import { PropTypes } from 'prop-types';
+import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
+import '../App.css';
+import Pic from "../assets/images/SMD.png";
 
 
-const Heading = ({ downloadPdf }) => {
+const Introduction = ({ downloadPdf }) => {
 
     // AOS animation useEffect
     useEffect(() => {
@@ -79,8 +79,8 @@ const Heading = ({ downloadPdf }) => {
     );
 };
 
-Heading.propTypes = {
+Introduction.propTypes = {
     downloadPdf: PropTypes.func,
 }
 
-export default Heading;
+export default Introduction;

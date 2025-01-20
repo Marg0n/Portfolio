@@ -1,7 +1,7 @@
 
 import About from './components/About'
 import Footer from './components/Footer'
-import Heading from './components/Heading'
+import Introduction from './components/Introduction'
 import RecentProjects from './components/RecentProjects'
 import Skills from './components/Skills'
 
@@ -10,62 +10,109 @@ import './App.css'
 
 import html2canvas from "html2canvas-pro"
 import { jsPDF } from "jspdf"
-import { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { FcDownload } from 'react-icons/fc'
 import { useLocation } from 'react-router-dom'
 import { NavHashLink } from 'react-router-hash-link'
 import tap from "../src/assets/icons/tap-gesture.gif"
+import useIntersectionObserver from './hooks/useIntersectionObserver'
+import {PropTypes} from 'prop-types'
 
 function App() {
 
   const pdfRef = useRef();
   // hash links
   const { hash } = useLocation();
+  // Object to store refs for sections
+  const sectionsRef = useRef({});
+  // Track active section
+  const [activeSection, setActiveSection] = useState('#introduction');
+
+  const sectionIds = ['#introduction', '#about', '#skills', '#projects', '#contact'];
+  const sectionsMap = {
+    '#introduction': (props) => <Introduction {...props} />,
+    '#about': () => <About />,
+    '#skills': () => <Skills />,
+    '#projects': () => <RecentProjects />,
+    '#contact': () => <Footer />,
+  };
+
+  // Initialize refs for each section
+  useEffect(() => {
+    sectionIds.forEach((id) => {
+      if (!sectionsRef.current[id]) {
+        sectionsRef.current[id] = React.createRef();
+      }
+    });
+  }, []);
+
+  // Update active section when a section becomes visible
+  const handleSectionVisibility = (id, isVisible) => {
+    if (isVisible) setActiveSection(id);
+  };
 
   // list of navigation
-  const lists = <>
-    <li>
-      <NavHashLink
-        className={hash === "#portfolio" ? "text-red-500 dark2 btn btn-ghost" : "dark2 hover:bg-orange-300 btn btn-ghost"}
-        to="#portfolio"
-        smooth
-      >
-        Portfolio
-      </NavHashLink>
-    </li>
-    <li>
+  const lists = sectionIds.map((id) => (
+    <li key={id}>
       <NavHashLink
         smooth
-        className={hash === "#about" ? "text-red-500 dark2 btn btn-ghost" : "dark2 hover:bg-orange-300 btn btn-ghost"}
-        to="#about"
+        className={
+          activeSection === id
+            ? 'text-red-500 dark2 btn btn-ghost' // Active style
+            : 'dark2 hover:bg-orange-300 btn btn-ghost' // Inactive style
+        }
+        to={id}
       >
-        About Me
+        {id.replace('#', '').replace(/^\w/, (c) => c.toUpperCase())}
       </NavHashLink>
     </li>
-    <li>
-      <NavHashLink
-        smooth
-        className={hash === "#skills" ? "text-red-500 dark2 btn btn-ghost" : "dark2 hover:bg-orange-300 btn btn-ghost"}
-        to="#skills"
-      >
-        Skills
-      </NavHashLink>
-    </li>
-    <li><NavHashLink
-      smooth
-      className={hash === "#projects" ? "text-red-500 dark2 btn btn-ghost" : "dark2 hover:bg-orange-300 btn btn-ghost"}
-      to="#projects">
-      Projects
-    </NavHashLink>
-    </li>
-    <li>
-      <NavHashLink smooth className="lg:hidden btn btn-ghost hover:bg-red-200 group" to="#contact" >
-        <button className="primary-color font-bold font-serif group-hover:text-black">
-          Hire Me
-        </button>
-      </NavHashLink>
-    </li>
-  </>
+  ));
+
+
+  // list of navigation
+  // const lists = <>
+  //   <li>
+  //     <NavHashLink
+  //       className={hash === "#portfolio" ? "text-red-500 dark2 btn btn-ghost" : "dark2 hover:bg-orange-300 btn btn-ghost"}
+  //       to="#portfolio"
+  //       smooth
+  //     >
+  //       Portfolio
+  //     </NavHashLink>
+  //   </li>
+  //   <li>
+  //     <NavHashLink
+  //       smooth
+  //       className={hash === "#about" ? "text-red-500 dark2 btn btn-ghost" : "dark2 hover:bg-orange-300 btn btn-ghost"}
+  //       to="#about"
+  //     >
+  //       About Me
+  //     </NavHashLink>
+  //   </li>
+  //   <li>
+  //     <NavHashLink
+  //       smooth
+  //       className={hash === "#skills" ? "text-red-500 dark2 btn btn-ghost" : "dark2 hover:bg-orange-300 btn btn-ghost"}
+  //       to="#skills"
+  //     >
+  //       Skills
+  //     </NavHashLink>
+  //   </li>
+  //   <li><NavHashLink
+  //     smooth
+  //     className={hash === "#projects" ? "text-red-500 dark2 btn btn-ghost" : "dark2 hover:bg-orange-300 btn btn-ghost"}
+  //     to="#projects">
+  //     Projects
+  //   </NavHashLink>
+  //   </li>
+  //   <li>
+  //     <NavHashLink smooth className="lg:hidden btn btn-ghost hover:bg-red-200 group" to="#contact" >
+  //       <button className="primary-color font-bold font-serif group-hover:text-black">
+  //         Hire Me
+  //       </button>
+  //     </NavHashLink>
+  //   </li>
+  // </>
 
   // download pdf
   const downloadPdf = () => {
@@ -131,18 +178,18 @@ function App() {
 
 
   return (
-    <div className='font-lato space-y-10 max-w-screen' id="portfolio">
+    <div className='font-lato space-y-10 max-w-screen' id="introduction">
 
       {/* navbar */}
       <div className="navbar justify-center sticky top-0 bg-opacity-5 bg-orange-500 z-10 -mb-10">
 
         {/* Download */}
-        <button
+        {/* <button
           onClick={downloadPdf}
           className="btn btn-circle bg-[#fd6e0a] bg-opacity-80 absolute right-10 animate-pulse hover:border-4 hover:border-x-[#fd6e0a] hover:border-y-[cornflowerblue] hover:animate-none"
         >
           <FcDownload size={25} />
-        </button>
+        </button> */}
 
         {/* hidden nav list for mobile */}
         <div className="dropdown absolute left-8 ">
@@ -178,7 +225,7 @@ function App() {
         </div >
 
 
-        {/* name */}
+        {/* My name */}
         <nav className="nav-title nav-title-sliding dark1 md:flex justify-around w-full hidden" >
           <h3>Ma<span className="primary-color">r</span>gon</h3>
 
@@ -196,8 +243,8 @@ function App() {
         </nav >
       </div>
 
-      <div ref={pdfRef}>
-        <Heading downloadPdf={downloadPdf} />
+      {/* <div ref={pdfRef}>
+        <Introduction downloadPdf={downloadPdf} />
 
         <About />
 
@@ -206,11 +253,48 @@ function App() {
         <RecentProjects />
 
         <Footer />
-      </div>
+      </div> */}
 
+      {/* SectionObserver components */}
+      {/* Dynamic Sections */}
+      <div ref={pdfRef}>
+        {sectionIds.map((id) => (
+          <div
+            key={id}
+            id={id.replace('#', '')} // Remove # for ID
+            ref={sectionsRef.current[id]} // Assign ref
+          // className="min-h-screen flex items-center justify-center"
+          >
+            <SectionObserver
+              id={id}
+              onVisible={(isVisible) => handleSectionVisibility(id, isVisible)}
+            />
+            {sectionsMap[id]({
+              downloadPdf: id === '#introduction' ? downloadPdf : undefined,
+            })}
+          </div>
+        ))}
+      </div>
 
     </div>
   )
 }
+
+// SectionObserver Component
+function SectionObserver({ id, onVisible }) {
+  const [ref, isVisible] = useIntersectionObserver({ threshold: 0.4 }); // 40% visibility
+
+  useEffect(() => {
+    onVisible(isVisible);
+  }, [isVisible, onVisible]);
+
+  return <div ref={ref} />;
+}
+
+SectionObserver.propTypes = {
+  id: PropTypes.string.isRequired,
+  onVisible: PropTypes.func.isRequired,
+};
+
 
 export default App
