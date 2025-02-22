@@ -57,6 +57,7 @@ const About = () => {
                                     <p className="min-h-11">Education</p>
                                     <p className="min-h-11"></p>
                                     <p className="min-h-11">Email</p>
+                                    <p className="min-h-11">Currently Working</p>
                                     <p className="min-h-11">Current Location</p>
                                 </div>
                                 <div className="font-bold font-serif">
@@ -64,6 +65,7 @@ const About = () => {
                                     <p className="min-h-11">BSC in CSE, AIUB</p>
                                     <p className="min-h-11">MBA (HRM major), UAP</p>
                                     <p className="min-h-11">monondcosta@gmail.com</p>
+                                    <p className="min-h-11">The Christian Co-operative Credit Union Ltd.</p>
                                     <p className="min-h-11">Dhaka</p>
                                 </div>
                             </div>
