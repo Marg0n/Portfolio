@@ -35,7 +35,7 @@ const About = () => {
                     <div className="max-w-xl " >
                         <h1 className="text-5xl font-bold" data-aos="slide-up" data-aos-duration="2000">About Me</h1>
                         <p className="py-6 text-justify text-pretty" data-aos="slide-up" data-aos-duration="2500">
-                            Currently I am studying in MBA in UAP and working at <span className="primary-color" title="The CCCUL Ltd"><a href="https://cccul.com/" target="blank">The Christian Co-operative Credit Union Ltd., Dhaka</a></span>. Here, I have been working in the NOC, ICT Department since July 2021. I am practicing my coding beside my daily scedule. I also had an intership in Banglalink as a web developer and data entry intern. There I gained knowledge how to work in a Team oriented environment for the first time that helped me a lot in my current work place.
+                            Currently I am studying in MBA in UAP and working at <span className="primary-color" title="The CCCUL Ltd"><a href="https://cccul.com/" target="blank">The Christian Co-operative Credit Union Ltd., Dhaka</a></span>. I have been working in the Network Operations Center (NOC) within the ICT Department since July 2021. I also completed an internship at Banglalink as a web developer and data entry intern. During this experience, I learned how to work effectively in a team-oriented environment, which has greatly benefited me in my current workplace.
                         </p>
                     </div>
 
