@@ -35,11 +35,11 @@ const About = () => {
                     <div className="max-w-xl " >
                         <h1 className="text-5xl font-bold" data-aos="slide-up" data-aos-duration="2000">About Me</h1>
                         <p className="py-6 text-justify text-pretty" data-aos="slide-up" data-aos-duration="2500">
-                            Currently I am studying in MBA in UAP and working at <span className="primary-color" title="The CCCUL Ltd"><a href="https://cccul.com/" target="blank">The Christian Co-operative Credit Union Ltd., Dhaka</a></span>. I have been working in the Network Operations Center (NOC) within the ICT Department since July 2021. I also completed an internship at Banglalink as a web developer and data entry intern. During this experience, I learned how to work effectively in a team-oriented environment, which has greatly benefited me in my current workplace.
+                            Currently I am studying in MBA in UAP and working at <span className="primary-color" title="The CCCUL Ltd"><a href="https://cccul.com/" target="blank">The Christian Co-operative Credit Union Ltd., Dhaka</a></span>. I have been working in the <i><b>Network Operations Center (NOC)</b></i> within the ICT Department since July 2021. Beside my full time job, I&apos;am also working part-time remote job with <span className="primary-color" title="Kreati">Kreati</span> as a <i><b>full stack web-developer</b></i>. I also completed an internship at <span className="primary-color" title="Banglalink">Banglalink</span> as a <i><b>web developer & data entry intern</b></i>. During this experience, I learned how to work effectively in a team-oriented environment, which has greatly benefited me in my current workplace.
                         </p>
                     </div>
 
-                    <div className="card lg:card-side bg-base-100 shadow-xl w-full">
+                    <div className="card lg:card-side w-full">
                         <figure className="lg:w-1/3" data-aos="slide-left" data-aos-duration="2500">
                             <img
                                 className="max-h-screen"
@@ -58,6 +58,7 @@ const About = () => {
                                     <p className="min-h-11"></p>
                                     <p className="min-h-11">Email</p>
                                     <p className="min-h-11">Currently Working</p>
+                                    <p className="min-h-11"></p>
                                     <p className="min-h-11">Current Location</p>
                                 </div>
                                 <div className="font-bold font-serif">
@@ -66,6 +67,7 @@ const About = () => {
                                     <p className="min-h-11">MBA (HRM major), UAP</p>
                                     <p className="min-h-11">monondcosta@gmail.com</p>
                                     <p className="min-h-11">The Christian Co-operative Credit Union Ltd.</p>
+                                    <p className="min-h-11">Kreati (remote)</p>
                                     <p className="min-h-11">Dhaka</p>
                                 </div>
                             </div>
