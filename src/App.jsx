@@ -17,7 +17,7 @@ import { useLocation } from 'react-router-dom'
 import { NavHashLink } from 'react-router-hash-link'
 import tap from "../src/assets/icons/tap-gesture.gif"
 import useIntersectionObserver from './hooks/useIntersectionObserver'
-import {PropTypes} from 'prop-types'
+import { PropTypes } from 'prop-types'
 
 function App() {
 
@@ -191,6 +191,17 @@ function App() {
         >
           <FcDownload size={25} />
         </button> */}
+        <a
+          href="https://drive.google.com/uc?export=download&id=182h1SzIacu1unDzos_O_uFXxLlRYHPNq"
+          rel="noopener noreferrer"
+        >
+          <button 
+          className="btn btn-circle bg-[#fd6e0a] bg-opacity-80 absolute right-10 animate-pulse hover:border-4 hover:border-x-[#fd6e0a] hover:border-y-[cornflowerblue] hover:animate-none"
+          >
+            <FcDownload size={25}  />
+          </button>
+        </a>
+
 
         {/* hidden nav list for mobile */}
         <div className="dropdown absolute left-8 ">
