@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import '../App.css';
 import Pic from "../assets/images/SMD.png";
-import { FcDocument, FcViewDetails } from "react-icons/fc";
+import { FcDocument, FcDownload, FcViewDetails } from "react-icons/fc";
 import { Link } from "react-router-dom";
 
 
@@ -58,7 +58,7 @@ const Introduction = ({ downloadPdf }) => {
                             </p>
                         </div>
 
-                        <div className="gap-4 lg:ml-56 flex flex-col-reverse md:flex-row justify-center items-center">
+                        <div className="gap-4 lg:ml-56 flex flex-col-reverse md:flex-row justify-start items-center  pl-10 mb-4">
                             {/* <button
                                 onClick={downloadPdf}
                                 className="btn btn-customized"
@@ -72,14 +72,52 @@ const Introduction = ({ downloadPdf }) => {
                             </a> */}
                             <Link to="https://drive.google.com/file/d/1zqhoaQmDb2hKXJwM24wm3cjEraG0_Ljx/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                                 <button
-                                    className="btn btn-customized"
+                                    className="btn btn-customized relative"
                                 >
                                     <FcViewDetails /> Curriculum Vitae
                                 </button>
                             </Link>
+                            <Link
+                                to="https://drive.google.com/uc?export=download&id=1zqhoaQmDb2hKXJwM24wm3cjEraG0_Ljx"
+                                rel="noopener noreferrer"
+                            >
+                                <button
+                                    className="btn !btn-circle !bg-[#fd6e0a] !bg-opacity-40 !animate-pulse hover:!border-4 hover:!border-x-[#fd6e0a] hover:!border-y-[cornflowerblue] hover:!animate-none hover:!bg-white"
+                                >
+                                    <FcDownload size={25} />
+                                </button>
+                            </Link>
+                            {/* <Link to="https://drive.google.com/file/d/182h1SzIacu1unDzos_O_uFXxLlRYHPNq/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                                <button className="btn" >
+                                    <FcDocument /> Resume
+                                </button>
+                            </Link>
+                            <Link
+                                to="https://drive.google.com/uc?export=download&id=182h1SzIacu1unDzos_O_uFXxLlRYHPNq"
+                                rel="noopener noreferrer"
+                            >
+                                <button
+                                    className="btn !btn-circle !bg-[#fd6e0a] !bg-opacity-40 !animate-pulse hover:!border-4 hover:!border-x-[#fd6e0a] hover:!border-y-[cornflowerblue] hover:!animate-none hover:!bg-white"
+                                >
+                                    <FcDownload size={25} />
+                                </button>
+                            </Link> */}
+                        </div>
+
+                        <div className="gap-4 lg:ml-56 flex flex-col-reverse md:flex-row justify-start items-center  pl-10">
                             <Link to="https://drive.google.com/file/d/182h1SzIacu1unDzos_O_uFXxLlRYHPNq/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                                 <button className="btn" >
                                     <FcDocument /> Resume
+                                </button>
+                            </Link>
+                            <Link
+                                to="https://drive.google.com/uc?export=download&id=182h1SzIacu1unDzos_O_uFXxLlRYHPNq"
+                                rel="noopener noreferrer"
+                            >
+                                <button
+                                    className="btn !btn-circle !bg-[#fd6e0a] !bg-opacity-40 !animate-pulse hover:!border-4 hover:!border-x-[#fd6e0a] hover:!border-y-[cornflowerblue] hover:!animate-none hover:!bg-white"
+                                >
+                                    <FcDownload size={25} />
                                 </button>
                             </Link>
                         </div>
