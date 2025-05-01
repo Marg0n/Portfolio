@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // import { FaDownload, FaPhoneAlt } from "react-icons/fa";
 import AOS from "aos";
 import { PropTypes } from 'prop-types';
@@ -5,6 +6,8 @@ import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import '../App.css';
 import Pic from "../assets/images/SMD.png";
+import { FcDocument, FcViewDetails } from "react-icons/fc";
+import { Link } from "react-router-dom";
 
 
 const Introduction = ({ downloadPdf }) => {
@@ -55,8 +58,8 @@ const Introduction = ({ downloadPdf }) => {
                             </p>
                         </div>
 
-                        {/* <div className="gap-4 lg:ml-56 flex flex-col-reverse md:flex-row justify-center items-center">
-                            <button
+                        <div className="gap-4 lg:ml-56 flex flex-col-reverse md:flex-row justify-center items-center">
+                            {/* <button
                                 onClick={downloadPdf}
                                 className="btn btn-customized"
                             >
@@ -66,8 +69,20 @@ const Introduction = ({ downloadPdf }) => {
                                 <button className="btn" >
                                     <FaPhoneAlt /> Contact
                                 </button>
-                            </a>
-                        </div> */}
+                            </a> */}
+                            <Link to="https://drive.google.com/file/d/1zqhoaQmDb2hKXJwM24wm3cjEraG0_Ljx/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                                <button
+                                    className="btn btn-customized"
+                                >
+                                    <FcViewDetails /> Curriculum Vitae
+                                </button>
+                            </Link>
+                            <Link to="https://drive.google.com/file/d/182h1SzIacu1unDzos_O_uFXxLlRYHPNq/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                                <button className="btn" >
+                                    <FcDocument /> Resume
+                                </button>
+                            </Link>
+                        </div>
                     </div>
 
                     <div className="" data-aos="fade-left" data-aos-duration="2000">
