@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 
 import About from './components/About'
 import Footer from './components/Footer'
