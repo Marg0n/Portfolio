@@ -43,23 +43,29 @@ const Skills = () => {
                     <div className="space-y-4">
                         <br />
                         <p className="grid grid-cols-2 md:grid-cols-4 justify-center items-center gap-2">
-                            <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML" data-aos="fade-down-right" data-aos-duration="1500"/>
-                            <img src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white" alt="CSS" data-aos="fade-down" data-aos-duration="1500"/>
-                            <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP" data-aos="fade-down-left" data-aos-duration="1500"/>
-                            <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" data-aos="fade-down-left" data-aos-duration="1500"/>
+                            <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML" data-aos="fade-down-right" data-aos-duration="1500" />
+                            <img src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white" alt="CSS" data-aos="fade-down" data-aos-duration="1500" />
+                            <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" data-aos="fade-down-left" data-aos-duration="1000" />
+                            <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind_CSS" data-aos="fade-down-left" data-aos-duration="1000" />
+                        </p>
+                        <p className="grid grid-cols-2 md:grid-cols-4 justify-center items-center gap-2">
+                            <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP" data-aos="fade-down-left" data-aos-duration="1500" />
+                            <img src="https://img.shields.io/badge/JavaScript-BA4188?style=for-the-badge&logo=javascript&logoColor=white" alt="JavaScript" data-aos="fade-down-left" data-aos-duration="1500" />
+                            <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" data-aos="fade-down-left" data-aos-duration="1500" />
+                            <img src="https://img.shields.io/badge/JQuery-7A00CC?style=for-the-badge&logo=jquery&logoColor=white" alt="JQuery" data-aos="fade-down-left" data-aos-duration="1500" />
                         </p>
                         <p className="grid grid-cols-2 md:grid-cols-4 justify-center items-center gap-2 ">
-                            <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="REACT" data-aos="fade-right" data-aos-duration="1500"/>
-                            <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind_CSS" data-aos="fade-up-right" data-aos-duration="1000"/>
-                            <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" data-aos="fade-up-left" data-aos-duration="1000"/>
-                            <img src="https://img.shields.io/badge/firebase-E5821D.svg?style=for-the-badge&logo=firebase" alt="Firebase" data-aos="fade-left" data-aos-duration="1500"/>
+                            <img src="https://img.shields.io/badge/React-202388?style=for-the-badge&logo=react&logoColor=61DAFB" alt="REACT" data-aos="fade-right" data-aos-duration="1500" />
+                            <img src="https://img.shields.io/badge/NextJs-2A2023?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js" data-aos="fade-up-right" data-aos-duration="1000" />
+                            <img src="https://img.shields.io/badge/Vercel-635D7C?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" data-aos="fade-up-left" data-aos-duration="1000" />
+                            <img src="https://img.shields.io/badge/firebase-E5821D.svg?style=for-the-badge&logo=firebase" alt="Firebase" data-aos="fade-left" data-aos-duration="1500" />
 
                         </p>
                         <p className="grid grid-cols-2 md:grid-cols-4  justify-center items-center gap-2">
-                            <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" data-aos="fade-up-right" data-aos-duration="1500"/>
-                            <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge" alt="Express.js" data-aos="fade-up" data-aos-duration="1500"/>
-                            <img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" data-aos="fade-up" data-aos-duration="1500"/>
-                            <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="NodeJs" data-aos="fade-up-left" data-aos-duration="1500"/>
+                            <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" data-aos="fade-up-right" data-aos-duration="1500" />
+                            <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge" alt="Express.js" data-aos="fade-up" data-aos-duration="1500" />
+                            <img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" data-aos="fade-up" data-aos-duration="1500" />
+                            <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="NodeJs" data-aos="fade-up-left" data-aos-duration="1500" />
 
                         </p>
                         <br />
