@@ -30,7 +30,7 @@ const Skills = () => {
                 <title>Sokhorio Margon D&apos; Costa | Projects</title>
             </Helmet>
 
-            <div className="hero min-h-screen" id="skills">
+            <div className="hero mt-28 min-h-screen" id="skills">
                 <div className="hero-content text-text-center md:w-3/4 min-h-3/4 shadow-2xl bg-opacity-5 bg-orange-500 flex flex-col justify-between items-center">
 
                     <div className="max-w-xl ">

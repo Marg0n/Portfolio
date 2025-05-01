@@ -133,7 +133,7 @@ const RecentProjects = () => {
                 <title>Sokhorio Margon D&apos; Costa | Projects</title>
             </Helmet>
 
-            <div className="hero flex flex-col my-6  justify-center items-center" id="projects">
+            <div className="hero mt-28 flex flex-col my-6  justify-center items-center" id="projects">
                 <div
                     className="hero-content text-text-center md:w-3/4 min-h-3/4 shadow-2xl bg-opacity-5 bg-orange-500 flex flex-col"
                     data-aos="fade-up"

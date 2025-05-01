@@ -43,7 +43,7 @@ const Introduction = ({ downloadPdf }) => {
             >
 
                 <div className="banner flex lg:flex-row flex-col w-full">
-                    <div className="w-4/6">
+                    <div className="!w-full lg:w-4/6">
                         <div className="lg:ml-56 pl-10">
                             <h3 className="banner-greeting dark2" data-aos="fade-down">Hi, I am</h3>
                             <h1
@@ -58,7 +58,7 @@ const Introduction = ({ downloadPdf }) => {
                             </p>
                         </div>
 
-                        <div className="gap-4 lg:ml-56 flex flex-col-reverse md:flex-row justify-start items-center  pl-10 mb-4">
+                        <div className="gap-4 lg:ml-56 flex  md:flex-row justify-start items-center pl-10 mb-4">
                             {/* <button
                                 onClick={downloadPdf}
                                 className="btn btn-customized"
@@ -104,7 +104,7 @@ const Introduction = ({ downloadPdf }) => {
                             </Link> */}
                         </div>
 
-                        <div className="gap-4 lg:ml-56 flex flex-col-reverse md:flex-row justify-start items-center  pl-10">
+                        <div className="gap-4 lg:ml-56 flex md:flex-row justify-start items-center pl-10">
                             <Link to="https://drive.google.com/file/d/182h1SzIacu1unDzos_O_uFXxLlRYHPNq/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
                                 <button className="btn" >
                                     <FcDocument /> Resume

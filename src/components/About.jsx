@@ -40,14 +40,14 @@ const About = () => {
                     </div>
 
                     <div className="card lg:card-side w-full">
-                        <figure className="lg:w-1/3" data-aos="slide-left" data-aos-duration="2500">
+                        <figure className="lg:w-1/3 !hidden md:!block" data-aos="slide-left" data-aos-duration="2500">
                             <img
                                 className="max-h-screen"
                                 src={Pimg}
                                 alt="profile Pic" />
                         </figure>
                         <div
-                            className="card-body lg:w-2/3 justify-center items-center"
+                            className="card-body w-full lg:w-2/3 justify-center items-center"
                             data-aos="slide-right" data-aos-duration="2500"
                         >
                             <h2 className="card-title mb-2 text-2xl underline">Some more information</h2>
