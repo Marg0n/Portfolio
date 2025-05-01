@@ -9,6 +9,7 @@ import nextjs from "../assets/icons/nextjs.png";
 import mongo from "../assets/icons/mongo.png";
 import node from "../assets/icons/nodejs.png";
 import react from "../assets/icons/react.png";
+import mongoose from "../assets/icons/mongoose.png";
 
 const description = `Our group project, Best Deal, is set to revolutionize online marketplaces by building a comprehensive Multi-Vendor eCommerce Platform. This platform is designed to accommodate multiple vendors, allowing them to independently manage and sell their products. Buyers benefit from a seamless experience, enabling them to browse, search, and purchase products from various vendors, all within a single, cohesive platform.
 
@@ -154,7 +155,7 @@ const RecentProjects = () => {
                             link="https://medi-mart-night.vercel.app"
                             aos="fade-right"
                             aosDuration="2000"
-                            techIcons={[ts, nextjs, react, node, mongo]}
+                            techIcons={[ts, nextjs, react, node, mongo, mongoose]}
                         />
 
                         <Card
@@ -164,7 +165,7 @@ const RecentProjects = () => {
                             link="https://best-deal-909.web.app"
                             aos="fade-left"
                             aosDuration="2000"
-                            techIcons={[js, react, node, mongo]}
+                            techIcons={[js, react, node, mongo, mongoose]}
                         />
 
                         <Card

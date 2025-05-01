@@ -66,6 +66,7 @@ const Skills = () => {
                             <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge" alt="Express.js" data-aos="fade-up" data-aos-duration="1500" />
                             <img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" data-aos="fade-up" data-aos-duration="1500" />
                             <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="NodeJs" data-aos="fade-up-left" data-aos-duration="1500" />
+                            <img src="https://img.shields.io/badge/Mongoose-3D4385?style=for-the-badge&logo=Mongoose&logoColor=white" alt="Mongoose" data-aos="fade-up-left" data-aos-duration="1500" />
 
                         </p>
                         <br />
