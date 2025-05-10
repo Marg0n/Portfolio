@@ -22,11 +22,14 @@ import { PropTypes } from 'prop-types'
 function App() {
 
   const pdfRef = useRef();
-  // hash links
+
+  //* hash links
   const { hash } = useLocation();
-  // Object to store refs for sections
+
+  //* Object to store refs for sections
   const sectionsRef = useRef({});
-  // Track active section
+
+  //* Track active section
   const [activeSection, setActiveSection] = useState('#introduction');
 
   const sectionIds = ['#introduction', '#about', '#skills', '#projects', '#contact'];
@@ -38,7 +41,7 @@ function App() {
     '#contact': () => <Footer />,
   };
 
-  // Initialize refs for each section
+  //* Initialize refs for each section
   useEffect(() => {
     sectionIds.forEach((id) => {
       if (!sectionsRef.current[id]) {
@@ -47,12 +50,12 @@ function App() {
     });
   }, []);
 
-  // Update active section when a section becomes visible
+  //* Update active section when a section becomes visible
   const handleSectionVisibility = (id, isVisible) => {
     if (isVisible) setActiveSection(id);
   };
 
-  // list of navigation
+  //* list of navigation
   const lists = sectionIds.map((id) => (
     <li key={id}>
       <NavHashLink
@@ -118,7 +121,7 @@ function App() {
   // download pdf
   const downloadPdf = () => {
 
-    // download pdf
+    //* download pdf
     const input = pdfRef.current;
     html2canvas(input).then((canvas) => {
       const imgData = canvas.toDataURL('image/png');
@@ -136,12 +139,12 @@ function App() {
     });
   };
 
-  // scrolling effect
+  //* scrolling effect
   useEffect(() => {
     const navTitle = document.querySelector('.nav-title-sliding');
     const dropdown = document.querySelector('#scroll-nav');
 
-    // Ensure navTitle is visible initially
+    //* Ensure navTitle is visible initially
     navTitle.classList.add('visible');
 
     const handleScroll = () => {
@@ -165,7 +168,7 @@ function App() {
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);
 
-    // Call handleResize initially to check the screen size on load 
+    //* Call handleResize initially to check the screen size on load 
     handleResize();
 
     return () => {
