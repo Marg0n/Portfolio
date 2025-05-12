@@ -10,13 +10,21 @@ import ErrorPage from './pages/ErrorPage';
 import 'aos/dist/aos.css';
 import 'animate.css';
 import { HelmetProvider } from 'react-helmet-async';
+import Medi from './pages/projects/Medi.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     errorElement: <ErrorPage />,
+    children: [
+
+    ]
   },
+  {
+    path: "/medi",
+    element: <Medi />,
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

@@ -10,8 +10,9 @@ import mongo from "../assets/icons/mongo.png";
 import node from "../assets/icons/nodejs.png";
 import react from "../assets/icons/react.png";
 import mongoose from "../assets/icons/mongoose.png";
+import CompactCard from "./CompactCard";
 
-const description = `Our group project, Best Deal, is set to revolutionize online marketplaces by building a comprehensive Multi-Vendor eCommerce Platform. This platform is designed to accommodate multiple vendors, allowing them to independently manage and sell their products. Buyers benefit from a seamless experience, enabling them to browse, search, and purchase products from various vendors, all within a single, cohesive platform.
+const bestdeal = `Our group project, Best Deal, is set to revolutionize online marketplaces by building a comprehensive Multi-Vendor eCommerce Platform. This platform is designed to accommodate multiple vendors, allowing them to independently manage and sell their products. Buyers benefit from a seamless experience, enabling them to browse, search, and purchase products from various vendors, all within a single, cohesive platform.
 
 Built on the robust MERN stack (MongoDB, Express, React, Node.js), our platform ensures modern, efficient, and secure solutions tailored for both vendors and customers. Key features include:
 
@@ -31,29 +32,7 @@ const medimart = `💊 MediMart – Medicine E-Commerce Platform
 
 Overview:
 
-MediMart is a full-featured medicine e-commerce platform that enables users to securely browse, search, and purchase medicines online. It includes role-based access for customers and admins, secure authentication, prescription verification, order tracking, and a responsive shopping experience.
-
-🔑 Features:
-
-User Authentication: Secure login via email/phone with JWT and bcrypt password hashing.
-Role-Based Access: Customers can shop and track orders; admins manage inventory, prescriptions, and users.
-Medicine Listings: Search by name, category, or symptoms. Each product includes details like stock, expiry, and prescription requirements.
-Cart & Checkout: Dynamic cart, prescription upload for restricted medicines, and integrated payment gateways (SSLCommerz).
-Order Management: Real-time tracking with email notifications; admins can update order status and verify prescriptions.
-Admin Dashboard: Manage medicines, orders, users, and stock levels.
-
-🛠 Tech Stack:
-
-Frontend: Next.js, TypeScript, React, Tailwind CSS
-
-Backend: Node.js, Express, MongoDB, JWT, bcryptjs
-
-🔗 Live Demo: https://medi-mart-night.vercel.app
-
-Demo Credentials: (email / pass)
-
-Admin: mina@mail.com / 1234
-User: nina@mail.com / 1234`;
+MediMart is a full-featured medicine e-commerce platform that enables users to securely browse, search, and purchase medicines online. It includes role-based access for customers and admins, secure authentication, prescription verification, order tracking, and a responsive shopping experience.`;
 
 const bicycle = `🚲 Bicycle Store – E-Commerce Application
 
@@ -148,61 +127,61 @@ const RecentProjects = () => {
                     </div>
 
                     <div className="grid grid-cols-1 gap-8 p-4">
-                        <Card
+                       <CompactCard
                             name='MediMart'
                             descp={medimart}
                             lang='Next.js + TypeScript'
-                            link="https://medi-mart-night.vercel.app"
-                            aos="fade-right"
+                            link="/medi"
+                            aos="fade"
                             aosDuration="2000"
                             techIcons={[ts, nextjs, react, node, mongo, mongoose]}
                         />
 
-                        <Card
+                         <CompactCard
                             name='Best Deal'
-                            descp={description}
+                            descp={bestdeal}
                             lang='MERN stack'
-                            link="https://best-deal-909.web.app"
+                            link=""
                             aos="fade-left"
                             aosDuration="2000"
                             techIcons={[js, react, node, mongo, mongoose]}
                         />
 
-                        <Card
+                        <CompactCard
                             name='Bicycle'
                             descp={bicycle}
                             lang='Next.js + TypeScript'
-                            link="https://bicyclestore.netlify.app"
+                            link=""
                             aos="fade-right"
                             aosDuration="2000"
                             techIcons={[ts, nextjs, react, node, mongo]}
                         />
 
-                        <Card
+                        <CompactCard
                             name='MediHouse_Client'
                             descp={medihouse}
                             lang='MERN stack'
-                            link='https://medihouse.netlify.app'
+                            link=''
                             aos="fade-right"
                             aosDuration="2000"
                             techIcons={[js, react, node, mongo]}
                         />
 
-                        <Card
+                        <CompactCard
                             name='Horizon'
                             descp={Horizon}
                             lang='MERN stack'
-                            link="https://tourism-management-client.web.app"
+                            link=""
                             aos="fade-up"
                             aosDuration="2000"
                             techIcons={[js, react, node, mongo]}
                         />
 
-                        <Card
+                        <CompactCard
                             name='Word Insight'
                             descp={WordInsight}
                             lang='MERN stack'
-                            link="https://worldinsight.netlify.app"
+                            link=""
                             aos="fade-left"
                             aosDuration="2000"
                             techIcons={[js, react, node, mongo]}
