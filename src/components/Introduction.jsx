@@ -42,9 +42,9 @@ const Introduction = ({ downloadPdf }) => {
             // style={{ backgroundImage: `url(${'../src/assets/images/developer.png'})`, backgroundPosition: `left 1rem top 6rem` }}
             >
 
-                <div className="banner flex lg:flex-row flex-col w-full">
-                    <div className="!w-full lg:w-4/6">
-                        <div className="lg:ml-56 pl-10">
+                <div className="banner flex lg:flex-row flex-col w-full overflow-x-hidden">
+                    <div className="!w-full lg:w-2/6">
+                        <div className="xl:ml-56 lg:ml-32 lg:pl-0 pl-5 flex flex-col justify-center items-start h-full">
                             <h3 className="banner-greeting dark2" data-aos="fade-down">Hi, I am</h3>
                             <h1
                                 className="banner-title dark1 text-5xl text-pretty lg:text-8xl w-full"
@@ -58,72 +58,62 @@ const Introduction = ({ downloadPdf }) => {
                             </p>
                         </div>
 
-                        <div className="gap-4 lg:ml-56 flex  md:flex-row justify-start items-center pl-10 mb-4">
-                            {/* <button
-                                onClick={downloadPdf}
-                                className="btn btn-customized"
-                            >
-                                <FaDownload /> Download Page
-                            </button>
-                            <a href="#contact">
-                                <button className="btn" >
-                                    <FaPhoneAlt /> Contact
-                                </button>
-                            </a> */}
-                            <Link to="https://drive.google.com/file/d/1zqhoaQmDb2hKXJwM24wm3cjEraG0_Ljx/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
-                                <button
-                                    className="btn btn-customized relative"
+                                {/* <button
+                                    onClick={downloadPdf}
+                                    className="btn btn-customized"
                                 >
-                                    <FcViewDetails /> Curriculum Vitae
+                                    <FaDownload /> Download Page
                                 </button>
-                            </Link>
-                            <Link
-                                to="https://drive.google.com/uc?export=download&id=1zqhoaQmDb2hKXJwM24wm3cjEraG0_Ljx"
-                                rel="noopener noreferrer"
-                            >
-                                <button
-                                    className="btn !btn-circle !bg-[#fd6e0a] !bg-opacity-40 !animate-pulse hover:!border-4 hover:!border-x-[#fd6e0a] hover:!border-y-[cornflowerblue] hover:!animate-none hover:!bg-white"
+                                <a href="#contact">
+                                    <button className="btn" >
+                                        <FaPhoneAlt /> Contact
+                                    </button>
+                                </a> */}
+                                
+                        <div className="flex md:flex-row flex-col justify-start items-start gap-4 lg:ml-32 xl:ml-56 lg:pl-0 pl-5">
+                            <div className="gap-4 flex  md:flex-row justify-start items-center">
+                                <Link to="https://drive.google.com/file/d/1zqhoaQmDb2hKXJwM24wm3cjEraG0_Ljx/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                                    <button
+                                        className="btn btn-customized relative  flex-nowrap"
+                                    >
+                                        <FcViewDetails /> 
+                                        CV
+                                    </button>
+                                </Link>
+                                <Link
+                                    to="https://drive.google.com/uc?export=download&id=1zqhoaQmDb2hKXJwM24wm3cjEraG0_Ljx"
+                                    rel="noopener noreferrer"
                                 >
-                                    <FcDownload size={25} />
-                                </button>
-                            </Link>
-                            {/* <Link to="https://drive.google.com/file/d/182h1SzIacu1unDzos_O_uFXxLlRYHPNq/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
-                                <button className="btn" >
-                                    <FcDocument /> Resume
-                                </button>
-                            </Link>
-                            <Link
-                                to="https://drive.google.com/uc?export=download&id=182h1SzIacu1unDzos_O_uFXxLlRYHPNq"
-                                rel="noopener noreferrer"
-                            >
-                                <button
-                                    className="btn !btn-circle !bg-[#fd6e0a] !bg-opacity-40 !animate-pulse hover:!border-4 hover:!border-x-[#fd6e0a] hover:!border-y-[cornflowerblue] hover:!animate-none hover:!bg-white"
-                                >
-                                    <FcDownload size={25} />
-                                </button>
-                            </Link> */}
-                        </div>
+                                    <button
+                                        className="btn !btn-circle !bg-[#fd6e0a] !bg-opacity-40 !animate-pulse hover:!border-4 hover:!border-x-[#fd6e0a] hover:!border-y-[cornflowerblue] hover:!animate-none hover:!bg-white"
+                                    >
+                                        <FcDownload size={25} />
+                                    </button>
+                                </Link>                                
+                            </div>
 
-                        <div className="gap-4 lg:ml-56 flex md:flex-row justify-start items-center pl-10">
-                            <Link to="https://drive.google.com/file/d/182h1SzIacu1unDzos_O_uFXxLlRYHPNq/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
-                                <button className="btn" >
-                                    <FcDocument /> Resume
-                                </button>
-                            </Link>
-                            <Link
-                                to="https://drive.google.com/uc?export=download&id=182h1SzIacu1unDzos_O_uFXxLlRYHPNq"
-                                rel="noopener noreferrer"
-                            >
-                                <button
-                                    className="btn !btn-circle !bg-[#fd6e0a] !bg-opacity-40 !animate-pulse hover:!border-4 hover:!border-x-[#fd6e0a] hover:!border-y-[cornflowerblue] hover:!animate-none hover:!bg-white"
+                            <div className="gap-4  flex md:flex-row justify-start items-center ">
+                                <Link to="https://drive.google.com/file/d/182h1SzIacu1unDzos_O_uFXxLlRYHPNq/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                                    <button className="btn flex-nowrap" >
+                                        <FcDocument />
+                                         Resume
+                                    </button>
+                                </Link>
+                                <Link
+                                    to="https://drive.google.com/uc?export=download&id=182h1SzIacu1unDzos_O_uFXxLlRYHPNq"
+                                    rel="noopener noreferrer"
                                 >
-                                    <FcDownload size={25} />
-                                </button>
-                            </Link>
+                                    <button
+                                        className="btn !btn-circle !bg-[#fd6e0a] !bg-opacity-40 !animate-pulse hover:!border-4 hover:!border-x-[#fd6e0a] hover:!border-y-[cornflowerblue] hover:!animate-none hover:!bg-white"
+                                    >
+                                        <FcDownload size={25} />
+                                    </button>
+                                </Link>
+                            </div>
                         </div>
                     </div>
 
-                    <div className="" data-aos="fade-left" data-aos-duration="2000">
+                    <div className="lg:w-4/6" data-aos="fade" data-aos-duration="2000">
                         <img id="profile-pic" src={Pic} alt="" />
                     </div>
                 </div>
