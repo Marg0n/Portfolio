@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import Card from "./Card";
 import AOS from "aos";
 import { Helmet } from "react-helmet-async";
 
