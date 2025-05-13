@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 
 const Card = ({ projectData, techIcons }) => {
   return (
-    <div className="card bg-base-100 max-w-[80vw] max-h-[90vh] shadow-md transition-shadow shadow-[#fd6e0a] hover:shadow-[cornflowerblue] p-6 group hover:scale-105 justify-center items-center overflow-hidden">
+    <div className="card bg-base-100 max-w-[80vw] max-h-[90vh] shadow-md transition-shadow shadow-[#fd6e0a] p-6 group justify-center items-center overflow-hidden">{/* hover:scale-105 hover:shadow-[cornflowerblue]  */}
       
       {/* Tech Icons Section */}
       <div className="flex justify-center items-center gap-4 mb-4 flex-wrap">
@@ -80,7 +80,7 @@ const Card = ({ projectData, techIcons }) => {
             <strong>Admin:</strong> {projectData.Admin}
           </p>
           <p>
-            <strong>User:</strong> {projectData.User}
+            <strong>User:</strong> {projectData.User || "Just make one to tryout 😄"}
           </p>
         </div>
       </div>

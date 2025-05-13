@@ -11,6 +11,11 @@ import 'aos/dist/aos.css';
 import 'animate.css';
 import { HelmetProvider } from 'react-helmet-async';
 import Medi from './pages/projects/Medi.jsx';
+import BestDeal from './pages/projects/BestDeal';
+import Bicycle from './pages/projects/Bicycle';
+import Horizon from './pages/projects/Horizon';
+import WordInsight from './pages/projects/WordInsight';
+import MediHouse from './pages/projects/MediHouse.jsx';
 
 const router = createBrowserRouter([
   {
@@ -24,7 +29,27 @@ const router = createBrowserRouter([
   {
     path: "/medi",
     element: <Medi />,
-  }
+  },
+  {
+    path: "/medihouse",
+    element: <MediHouse />,
+  },
+  {
+    path: "/bestdeal",
+    element: <BestDeal />,
+  },
+  {
+    path: "/bicycle",
+    element: <Bicycle />,
+  },
+  {
+    path: "/horizon",
+    element: <Horizon />,
+  },
+  {
+    path: "/wordinsight",
+    element: <WordInsight />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

@@ -12,21 +12,11 @@ import react from "../assets/icons/react.png";
 import mongoose from "../assets/icons/mongoose.png";
 import CompactCard from "./CompactCard";
 
-const bestdeal = `Our group project, Best Deal, is set to revolutionize online marketplaces by building a comprehensive Multi-Vendor eCommerce Platform. This platform is designed to accommodate multiple vendors, allowing them to independently manage and sell their products. Buyers benefit from a seamless experience, enabling them to browse, search, and purchase products from various vendors, all within a single, cohesive platform.
+const bestdeal = `E-Commerce Platform
 
-Built on the robust MERN stack (MongoDB, Express, React, Node.js), our platform ensures modern, efficient, and secure solutions tailored for both vendors and customers. Key features include:
+Our group project, Best Deal, is set to revolutionize online marketplaces by building a comprehensive Multi-Vendor eCommerce Platform. This platform is designed to accommodate multiple vendors, allowing them to independently manage and sell their products. Buyers benefit from a seamless experience, enabling them to browse, search, and purchase products from various vendors, all within a single, cohesive platform.
 
-- Vendor autonomy: Vendors can manage their own product listings, orders, and customer interactions.
-- Centralized management: Platform owners can oversee vendor activities, ensuring smooth operation and quality control.
-- State-of-the-art technology: Integration with Redux for efficient state management, enhancing user experience.
-
-Explore more about our project at: https://best-deal-909.web.app
-
-Demo Credentials: (email / pass)
-
-Admin: margon@gmail.com / Mm@123
-Vendor: newvendor@test.com / Vv@test.com
-User: user@user1.com / User@user1.com`;
+To explore more, just open an account and you are good to go.`;
 
 const medimart = `💊 MediMart – Medicine E-Commerce Platform
 
@@ -40,45 +30,20 @@ Overview:
 
 Bicycle Store is a responsive e-commerce platform that allows users to browse, search, and purchase bicycles. It features secure role-based authentication, product filtering, order management, and a streamlined checkout experience.
 
-🔑 Features:
+To explore more, just open an account and you are good to go.`;
 
-User Authentication: Role-based login with secure password hashing and JWT-based sessions.
-Public Pages: Home, About, and All Bicycles with filtering, search, and dynamic bicycle listings.
-Private Routes: Checkout and dashboards for both users and admins.
-Admin Dashboard: Manage users, products, and orders with full CRUD functionality.
-User Dashboard: View orders, update profiles, and change passwords securely.
-Secure Payments: Integration with Stripe or ShurjoPay for order completion.
+const medihouse = `A robust Diagnostic Center Management System, a full-stack web application that effectively manages appointments, patient records, test results, and administrative tasks for a diagnostic center.
 
-🛠 Tech Highlights:
-
-JWT authentication, bcrypt password hashing
-Role-based access control (Admin vs. Customer)
-Fully responsive UI with search and filter features
-
-🔗 Live Demo: https://bicyclestore.netlify.app
-
-Demo Credentials: (email / pass)
-
-Admin: mina@mail.com / 1234
-User: nina@mail.com / 1234`;
-
-const medihouse =`A robust Diagnostic Center Management System, a full-stack web application that effectively manages appointments, patient records, test results, and administrative tasks for a diagnostic center.
-                            
-🔗 Live Demo: https://medihouse.netlify.app
-
-Demo Credentials: (email / pass)
-
-Admin: margon@mail.com / mM123\``;
-
-const Horizon=`A robust tourism management website. A tourism-focused website, but not just any tourism! Find out more information here!
-
-🔗 Live Demo: https://tourism-management-client.web.app
 
 To explore more, just open an account and you are good to go.`;
 
-const WordInsight=`A Blog focused website. Here any user can create account. Then they can read, write and bookmark blogs.
+const Horizon = `A robust tourism management website. A tourism-focused website, but not just any tourism! Find out more information here!
 
-🔗 Live Demo: https://worldinsight.netlify.app
+
+To explore more, just open an account and you are good to go.`;
+
+const WordInsight = `A Blog focused website. Here any user can create account. Then they can read, write and bookmark blogs.
+
 
 To explore more, just open an account and you are good to go.`;
 
@@ -127,22 +92,22 @@ const RecentProjects = () => {
                     </div>
 
                     <div className="grid grid-cols-1 gap-8 p-4">
-                       <CompactCard
+                        <CompactCard
                             name='MediMart'
                             descp={medimart}
                             lang='Next.js + TypeScript'
                             link="/medi"
-                            aos="fade"
+                            aos="fade-right"
                             aosDuration="2000"
                             techIcons={[ts, nextjs, react, node, mongo, mongoose]}
                         />
 
-                         <CompactCard
+                        <CompactCard
                             name='Best Deal'
                             descp={bestdeal}
                             lang='MERN stack'
-                            link=""
-                            aos="fade-left"
+                            link="/bestdeal"
+                            aos="fade-right"
                             aosDuration="2000"
                             techIcons={[js, react, node, mongo, mongoose]}
                         />
@@ -151,7 +116,7 @@ const RecentProjects = () => {
                             name='Bicycle'
                             descp={bicycle}
                             lang='Next.js + TypeScript'
-                            link=""
+                            link="bicycle"
                             aos="fade-right"
                             aosDuration="2000"
                             techIcons={[ts, nextjs, react, node, mongo]}
@@ -161,7 +126,7 @@ const RecentProjects = () => {
                             name='MediHouse_Client'
                             descp={medihouse}
                             lang='MERN stack'
-                            link=''
+                            link='medihouse'
                             aos="fade-right"
                             aosDuration="2000"
                             techIcons={[js, react, node, mongo]}
@@ -171,7 +136,7 @@ const RecentProjects = () => {
                             name='Horizon'
                             descp={Horizon}
                             lang='MERN stack'
-                            link=""
+                            link="/horizon"
                             aos="fade-up"
                             aosDuration="2000"
                             techIcons={[js, react, node, mongo]}
@@ -181,8 +146,8 @@ const RecentProjects = () => {
                             name='Word Insight'
                             descp={WordInsight}
                             lang='MERN stack'
-                            link=""
-                            aos="fade-left"
+                            link="/wordinsight"
+                            aos="fade-right"
                             aosDuration="2000"
                             techIcons={[js, react, node, mongo]}
                         />
