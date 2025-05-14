@@ -203,7 +203,7 @@ function App() {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow-2xl">
+            className="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow-2xl bg-gray-200 bg-opacity-80">
             {lists}
           </ul>
         </div >
