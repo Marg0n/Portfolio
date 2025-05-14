@@ -1,17 +1,12 @@
 /* eslint-disable no-unused-vars */
-import js from '../assets/icons/js.png';
-import ts from '../assets/icons/ts.png';
-import nextjs from '../assets/icons/nextjs.png';
-import mongo from '../assets/icons/mongo.png';
-import node from '../assets/icons/nodejs.png';
-import react from '../assets/icons/react.png';
-import mongoose from '../assets/icons/mongoose.png';
 import PropTypes from 'prop-types';
+import { FaHome } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Card = ({ projectData, techIcons }) => {
   return (
-    <div className="card bg-base-100 max-w-[80vw] max-h-[90vh] shadow-md transition-shadow shadow-[#fd6e0a] p-6 group justify-center items-center overflow-hidden">{/* hover:scale-105 hover:shadow-[cornflowerblue]  */}
-      
+    <div className="card bg-base-100 max-w-[80vw] max-h-[90vh] shadow-md transition-shadow shadow-[#fd6e0a] p-6 group justify-center items-center overflow-hidden relative">{/* hover:scale-105 hover:shadow-[cornflowerblue]  */}
+
       {/* Tech Icons Section */}
       <div className="flex justify-center items-center gap-4 mb-4 flex-wrap">
         {techIcons?.map((icon, index) => (
@@ -83,6 +78,13 @@ const Card = ({ projectData, techIcons }) => {
             <strong>User:</strong> {projectData.User || "Just make one to tryout 😄"}
           </p>
         </div>
+      </div>
+
+      {/* Back to Home */}
+      <div>
+        <Link to="/" className="absolute top-4 left-4 text-sm text-black hover:text-orange-500 flex gap-2 items-center animate__tada animate__animated animate__infinite animate__slow">
+          <FaHome size={25} />
+        </Link>
       </div>
     </div>
   );
