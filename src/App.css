@@ -106,9 +106,19 @@ nav a {
 #introduction {
   background: #fff8f3;
   background-image: url(../src/assets/images/header_bg.png),
-    url(../src/assets/images/developer.png);
+    url(../src/assets/images/webDeveloper2.png);
+    /* url(../src/assets/images/developer.png); */
   background-repeat: no-repeat;
-  background-position: bottom right, top 6rem left 1rem;
+  background-position: bottom right, top 0rem left 1rem;
+  background-size: contain;
+}
+
+#apps {
+  background: #fff8f3;
+  background-image: url(../src/assets/images/header_bg.png);
+  background-repeat: no-repeat;
+  background-position: bottom right, top 0rem left 1rem;
+  /* background-size: contain; */
 }
 
 .banner {

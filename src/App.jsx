@@ -182,7 +182,7 @@ function App() {
 
 
   return (
-    <div className='font-lato space-y-10 max-w-screen' id="introduction">
+    <div className='font-lato space-y-10 max-w-screen' id="apps">
 
       {/* navbar */}
       <div className="navbar justify-center sticky top-0 bg-opacity-5 bg-orange-500 z-10 -mb-10">
