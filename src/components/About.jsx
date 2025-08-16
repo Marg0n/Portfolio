@@ -40,9 +40,9 @@ const About = () => {
                     </div>
 
                     <div className="card lg:card-side w-full">
-                        <figure className="lg:w-1/3 !hidden lg:!block" data-aos="slide-left" data-aos-duration="2500">
+                        <figure className="lg:w-1/3 !hidden lg:!block z-50" data-aos="slide-left" data-aos-duration="2500">
                             <img
-                                className="max-h-screen"
+                                className="object-contain h-96"
                                 src={Pimg}
                                 alt="profile Pic" />
                         </figure>
