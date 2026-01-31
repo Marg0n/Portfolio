@@ -5,6 +5,9 @@ import Pimg from "../assets/images/SMD.png";
 
 const About = () => {
 
+    //* variables
+    // const Pimg = 'https://avatars.githubusercontent.com/u/54356991?v=4'
+
     //* AOS animation useEffect
     useEffect(() => {
         AOS.init({
@@ -31,7 +34,7 @@ const About = () => {
             </Helmet>
 
             <div className="hero mt-28 min-h-screen" id="about">
-                <div className="hero-content text-center md:w-3/4 min-h-3/4 shadow-2xl bg-opacity-5 bg-orange-500 flex flex-col">
+                <div className="hero-content text-center md:w-3/4 min-h-3/4 shadow-2xl bg-opacity-5 bg-orange-500 flex flex-col px-4">
                     <div className="max-w-xl " >
                         <h1 className="text-5xl font-bold" data-aos="slide-up" data-aos-duration="2000">About Me</h1>
                         <p className="py-6 text-justify text-pretty" data-aos="slide-up" data-aos-duration="2500">
@@ -39,10 +42,10 @@ const About = () => {
                         </p>
                     </div>
 
-                    <div className="card lg:card-side w-full">
-                        <figure className="lg:w-1/3 !hidden lg:!block z-50" data-aos="slide-left" data-aos-duration="2500">
+                    <div className="card lg:card-side w-full flex justify-center items-center">
+                        <figure className="lg:w-1/3 !hidden lg:!block z-50 text-center" data-aos="slide-left" data-aos-duration="2500">
                             <img
-                                className="object-contain h-96"
+                                className="object-contain h-full w-full rounded-lg"
                                 src={Pimg}
                                 alt="profile Pic" />
                         </figure>
